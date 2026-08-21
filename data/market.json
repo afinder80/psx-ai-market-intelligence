@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "dataset": "Seed snapshot — 19 Aug 2026 approx 10:19 PKT",
+    "live": false,
+    "modelVersion": "0.6",
+    "uiVersion": "1.0-independent",
+    "lastSuccessfulRefresh": "2026-08-19T10:19:00+05:00",
+    "authorizedFeedConnected": false
+  },
+  "market": {"kse100":178474,"kse100Change":0.29,"allShare":108207,"allShareChange":0.41,"ogti":36049,"ogtiChange":1.63},
+  "stocks": [
+    {"symbol":"KEL","company":"K-Electric","sector":"Power","price":7.35,"change":1.24,"pe":null,"avgVol":25400000,"state":"WATCH ENTRY","risk":"PASS FOR REVIEW","low2y":null,"high2y":null,"tactical":67,"entryQuality":89,"medium":50,"long":40,"conviction":62,"confidence":78,"paperSignal":true,"liveEligible":true},
+    {"symbol":"GCIL","company":"Ghani Chemical Industries","sector":"Chemicals","price":36.15,"change":0.42,"pe":7.47,"avgVol":5216272,"state":"RESEARCH","risk":"PASS FOR REVIEW","low2y":null,"high2y":null,"tactical":71,"entryQuality":89,"medium":70,"long":65,"conviction":74,"confidence":78,"paperSignal":true,"liveEligible":false},
+    {"symbol":"CNERGY","company":"Cnergyico PK","sector":"Refinery","price":14.38,"change":-2.77,"pe":null,"avgVol":132700000,"state":"NO TRADE","risk":"BLOCK","low2y":null,"high2y":null,"tactical":43,"entryQuality":89,"medium":50,"long":40,"conviction":56,"confidence":78,"paperSignal":false,"liveEligible":false},
+    {"symbol":"FPJM","company":"First Punjab Modaraba","sector":"Modarabas","price":13.33,"change":9.98,"pe":null,"avgVol":1448212,"state":"DO NOT CHASE","risk":"BLOCK","low2y":null,"high2y":null,"tactical":100,"entryQuality":53,"medium":50,"long":40,"conviction":61,"confidence":78,"paperSignal":false,"liveEligible":false},
+    {"symbol":"786","company":"786 Investments","sector":"Investment","price":24.34,"change":1.63,"pe":9.7,"avgVol":227754,"state":"WATCH ONLY","risk":"PASS FOR REVIEW","low2y":null,"high2y":null,"tactical":68,"entryQuality":81,"medium":65,"long":65,"conviction":70,"confidence":78,"paperSignal":true,"liveEligible":false},
+    {"symbol":"FNEL","company":"First National Equities","sector":"Investment","price":1.17,"change":0.86,"pe":0.94,"avgVol":17088773,"state":"WATCH ONLY","risk":"PASS FOR REVIEW","low2y":null,"high2y":null,"tactical":73,"entryQuality":89,"medium":70,"long":65,"conviction":74,"confidence":78,"paperSignal":true,"liveEligible":false},
+    {"symbol":"AHCL","company":"Arif Habib Corporation","sector":"Investment","price":16.58,"change":0.55,"pe":3.08,"avgVol":3036825,"state":"RESEARCH","risk":"PASS FOR REVIEW","low2y":null,"high2y":null,"tactical":71,"entryQuality":89,"medium":70,"long":65,"conviction":74,"confidence":78,"paperSignal":true,"liveEligible":false},
+    {"symbol":"AKDSL","company":"AKD Securities","sector":"Investment","price":37.0,"change":0.16,"pe":6.48,"avgVol":480102,"state":"RESEARCH","risk":"PASS FOR REVIEW","low2y":null,"high2y":null,"tactical":59,"entryQuality":81,"medium":65,"long":65,"conviction":68,"confidence":78,"paperSignal":true,"liveEligible":false},
+    {"symbol":"BBFL","company":"Balochistan Bearings","sector":"Engineering","price":43.0,"change":1.82,"pe":10.17,"avgVol":1077834,"state":"WATCH ONLY","risk":"PASS FOR REVIEW","low2y":null,"high2y":null,"tactical":71,"entryQuality":89,"medium":50,"long":40,"conviction":62,"confidence":78,"paperSignal":true,"liveEligible":false},
+    {"symbol":"ASL","company":"Aisha Steel Mills","sector":"Engineering","price":15.16,"change":2.64,"pe":216.57,"avgVol":3862838,"state":"WATCH ONLY","risk":"PASS FOR REVIEW","low2y":null,"high2y":null,"tactical":76,"entryQuality":89,"medium":50,"long":40,"conviction":64,"confidence":78,"paperSignal":true,"liveEligible":false},
+    {"symbol":"OGDC","company":"Oil & Gas Development Co.","sector":"Oil & Gas Exploration","price":318.4,"change":1.1,"pe":8.15,"avgVol":3705620,"state":"RESEARCH","risk":"PASS FOR REVIEW","low2y":null,"high2y":null,"tactical":75,"entryQuality":89,"medium":70,"long":65,"conviction":75,"confidence":78,"paperSignal":true,"liveEligible":false},
+    {"symbol":"UBL","company":"United Bank","sector":"Commercial Banks","price":459.95,"change":-0.44,"pe":7.73,"avgVol":2100142,"state":"RESEARCH","risk":"PASS FOR REVIEW","low2y":null,"high2y":null,"tactical":65,"entryQuality":89,"medium":70,"long":65,"conviction":72,"confidence":78,"paperSignal":true,"liveEligible":false},
+    {"symbol":"UNITY","company":"Unity Foods","sector":"Food","price":11.14,"change":0.27,"pe":9.06,"avgVol":11370785,"state":"WATCH ONLY","risk":"PASS FOR REVIEW","low2y":null,"high2y":null,"tactical":70,"entryQuality":89,"medium":70,"long":65,"conviction":74,"confidence":78,"paperSignal":true,"liveEligible":false},
+    {"symbol":"WASL","company":"Waves Singer Pakistan","sector":"Engineering","price":6.38,"change":-0.47,"pe":42.53,"avgVol":12633261,"state":"NO EDGE","risk":"WAIT","low2y":null,"high2y":null,"tactical":57,"entryQuality":89,"medium":50,"long":40,"conviction":59,"confidence":78,"paperSignal":false,"liveEligible":false},
+    {"symbol":"WAVES","company":"Waves Corporation","sector":"Engineering","price":10.31,"change":1.68,"pe":21.04,"avgVol":3007431,"state":"WATCH ONLY","risk":"PASS FOR REVIEW","low2y":null,"high2y":null,"tactical":70,"entryQuality":89,"medium":50,"long":40,"conviction":62,"confidence":78,"paperSignal":true,"liveEligible":false},
+    {"symbol":"WAVESAPP","company":"Waves Home Appliances","sector":"Engineering","price":9.08,"change":3.07,"pe":12.79,"avgVol":4217176,"state":"WATCH ONLY","risk":"PASS FOR REVIEW","low2y":null,"high2y":null,"tactical":78,"entryQuality":89,"medium":50,"long":40,"conviction":64,"confidence":78,"paperSignal":true,"liveEligible":false}
+  ]
+}
