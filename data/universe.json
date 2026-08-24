@@ -1,27 +1,6871 @@
 {
   "meta": {
-    "source": "Pakistan Stock Exchange — Listed Companies / Companies Registrar",
-    "sourceUrl": "https://www.psx.com.pk/psx/resources-and-tools/listings/listed-companies-data",
+    "source": "Pakistan Stock Exchange — official symbols reference endpoint",
+    "sourceUrl": "https://dps.psx.com.pk/symbols",
     "asOf": "2026-08-24",
-    "complete": false,
-    "note": "Bootstrap master. Expand from the official PSX Companies Registrar or an authorized reference-data feed; market prices are deliberately excluded from this file."
+    "complete": true,
+    "universeSize": 762,
+    "excludedDebtInstruments": 246,
+    "note": "Reference metadata only. Debt instruments are excluded from the main shares universe; market prices are stored separately in data/market.json."
   },
   "stocks": [
-    {"symbol":"786","company":"786 Investments","sector":"Investment","status":"Listed"},
-    {"symbol":"AHCL","company":"Arif Habib Corporation","sector":"Investment","status":"Listed"},
-    {"symbol":"AKDSL","company":"AKD Securities","sector":"Investment","status":"Listed"},
-    {"symbol":"ASL","company":"Aisha Steel Mills","sector":"Engineering","status":"Listed"},
-    {"symbol":"BBFL","company":"Balochistan Bearings","sector":"Engineering","status":"Listed"},
-    {"symbol":"CNERGY","company":"Cnergyico PK","sector":"Refinery","status":"Listed"},
-    {"symbol":"FNEL","company":"First National Equities","sector":"Investment","status":"Listed"},
-    {"symbol":"FPJM","company":"First Punjab Modaraba","sector":"Modarabas","status":"Listed"},
-    {"symbol":"GCIL","company":"Ghani Chemical Industries","sector":"Chemicals","status":"Listed"},
-    {"symbol":"KEL","company":"K-Electric","sector":"Power","status":"Listed"},
-    {"symbol":"OGDC","company":"Oil & Gas Development Co.","sector":"Oil & Gas Exploration","status":"Listed"},
-    {"symbol":"UBL","company":"United Bank","sector":"Commercial Banks","status":"Listed"},
-    {"symbol":"UNITY","company":"Unity Foods","sector":"Food","status":"Listed"},
-    {"symbol":"WASL","company":"Waves Singer Pakistan","sector":"Engineering","status":"Listed"},
-    {"symbol":"WAVES","company":"Waves Corporation","sector":"Engineering","status":"Listed"},
-    {"symbol":"WAVESAPP","company":"Waves Home Appliances","sector":"Engineering","status":"Listed"}
+    {
+      "symbol": "786",
+      "company": "786 Investments Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "786R",
+      "company": "786 Investment (Right)",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AABS",
+      "company": "Al-Abbas Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AAL",
+      "company": "Agro Allianz Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AASM",
+      "company": "Al-Abid Silk Mills Limited",
+      "sector": "SYNTHETIC & RAYON",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AATM",
+      "company": "Ali Asghar Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ABL",
+      "company": "Allied Bank Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ABOT",
+      "company": "Abbott Laboratories (Pakistan) Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ABSON",
+      "company": "Abson Industries Limited",
+      "sector": "PAPER, BOARD & PACKAGING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ACIETF",
+      "company": "Alfalah Consumer Index (ETF)",
+      "sector": "EXCHANGE TRADED FUNDS",
+      "status": "Listed",
+      "instrumentType": "ETF",
+      "isETF": true,
+      "isDebt": false
+    },
+    {
+      "symbol": "ACPL",
+      "company": "Attock Cement Pakistan Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ADAMS",
+      "company": "Adam Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ADMM",
+      "company": "Artistic Denim Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ADOS",
+      "company": "Ados Pakistan Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ADTM",
+      "company": "Adil Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AEL",
+      "company": "AEL Textile Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AGHA",
+      "company": "Agha Steel Ind.Ltd",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AGIC",
+      "company": "Askari General Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AGICR2",
+      "company": "Askari General Insurance Co.Ltd.(Right)",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AGIL",
+      "company": "Agriauto Industries Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AGL",
+      "company": "Agritech Limited",
+      "sector": "FERTILIZER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AGLNCPS",
+      "company": "Agritech Non-Voting (Pref) Class A",
+      "sector": "FERTILIZER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AGP",
+      "company": "AGP Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AGSML",
+      "company": "Abdullah Shah Ghazi Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AGTL",
+      "company": "Al-Ghazi Tractors Limited",
+      "sector": "AUTOMOBILE ASSEMBLER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AHCL",
+      "company": "Arif Habib Corporation Limited",
+      "sector": "FERTILIZER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AHL",
+      "company": "Arif Habib Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AHTM",
+      "company": "Ahmad Hassan Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AICL",
+      "company": "Adamjee Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AIRLINK",
+      "company": "Air Link Communication Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AKBL",
+      "company": "Askari Bank Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AKDCL",
+      "company": "AKD Capital Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AKDHL",
+      "company": "AKD Hospitality Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AKDSL",
+      "company": "AKD Securities Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AKGL",
+      "company": "Al-Khair Gadoon Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AKZO",
+      "company": "Akzo Nobel Pakistan Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ALAC",
+      "company": "Askari Life Assurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ALIFE",
+      "company": "Adamjee Life Assurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ALNRS",
+      "company": "Al-Noor Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ALQT",
+      "company": "Al-Qadir Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ALTN",
+      "company": "Altern Energy Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AMBL",
+      "company": "Apna Microfinance Bank Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AMSL",
+      "company": "Al-Mal Securities & Services Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AMTEX",
+      "company": "Amtex Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ANL",
+      "company": "Azgard Nine Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ANNT",
+      "company": "Annoor Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ANSM",
+      "company": "Ansari Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ANTM",
+      "company": "AN Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "APL",
+      "company": "Attock Petroleum Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "APOT",
+      "company": "Apollo Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AQTM",
+      "company": "Al-Qaim Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ARCTM",
+      "company": "Arctic Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ARM",
+      "company": "Allied Rental Modaraba",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ARMG",
+      "company": "ARM Green Industries Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ARPAK",
+      "company": "Arpak International Investments Ltd.",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ARPL",
+      "company": "Archroma Pakistan Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ARUJ",
+      "company": "Aruj Industries Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ASC",
+      "company": "Al Shaheer Corporation Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ASCR1",
+      "company": "AL-Shaheer (R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ASHT",
+      "company": "Ashfaq Textile Mills Limited",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ASIC",
+      "company": "Asia Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ASL",
+      "company": "Aisha Steel Mills Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ASLCPS",
+      "company": "Aisha Steel Convt (Pref) Right",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ASLPS",
+      "company": "Aisha Steel Convertible (Pref)",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ASRL",
+      "company": "Associated Services Limited",
+      "sector": "JUTE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ASTL",
+      "company": "Amreli Steels Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ASTM",
+      "company": "Asim Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ATBA",
+      "company": "Atlas Battery Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ATIL",
+      "company": "Atlas Insurance Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ATLH",
+      "company": "Atlas Honda Limited",
+      "sector": "AUTOMOBILE ASSEMBLER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ATRL",
+      "company": "Attock Refinery Limited",
+      "sector": "REFINERY",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AVN",
+      "company": "Avanceon Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AWTX",
+      "company": "Allawasaya Tex. & Finishing Mills Ltd",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AWWAL",
+      "company": "Awwal Modaraba",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AYTM",
+      "company": "Ayesha Textile Mills Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AYZT",
+      "company": "Ayaz Textile Mills Limited",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AZMT",
+      "company": "Azmat Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "AZTM",
+      "company": "Al-Azhar Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BAFL",
+      "company": "Bank Alfalah Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BAFS",
+      "company": "Baba Farid Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BAHL",
+      "company": "Bank AL Habib Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BAPL",
+      "company": "Bawany Air Products Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BATA",
+      "company": "Bata Pakistan Limited",
+      "sector": "LEATHER & TANNERIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BBFL",
+      "company": "Big Bird Foods Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BCL",
+      "company": "Bolan Castings Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BCML",
+      "company": "Babri Cotton Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BECO",
+      "company": "Beco Steel Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BEEM",
+      "company": "Beema-Pakistan Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BELA",
+      "company": "Bela Automotives Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BERG",
+      "company": "Berger Paints Pakistan Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BFAGRO",
+      "company": "Barkat Frisian Agro Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BFBIO",
+      "company": "BF Biosciences Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BFMOD",
+      "company": "B.F. Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BGL",
+      "company": "Baluchistan Glass Limited",
+      "sector": "GLASS & CERAMICS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BHAT",
+      "company": "Bhanero Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BIFO",
+      "company": "Biafo Industries Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BIIC",
+      "company": "Business & Industrial Insurance Company",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BILF",
+      "company": "Bilal Fibres Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BIPL",
+      "company": "BankIslami Pakistan Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BIPLS",
+      "company": "BIPL Securities Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BLUEX",
+      "company": "Blue-Ex Limited",
+      "sector": "TRANSPORT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BML",
+      "company": "Bank Makramah Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BNL",
+      "company": "Bunnys Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BNWM",
+      "company": "Bannu Woollen Mills Limited",
+      "sector": "WOOLLEN",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BOK",
+      "company": "The Bank of Khyber",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BOP",
+      "company": "The Bank of Punjab",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BPBL",
+      "company": "Balochistan Particle Board Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BPL",
+      "company": "Burshane LPG (Pakistan) Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BROT",
+      "company": "Brothers Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BRR",
+      "company": "B.R.R. Guardian Modaraba",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BRRG",
+      "company": "B.R.R Guardian Limited",
+      "sector": "PROPERTY",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BTL",
+      "company": "Blessed Textiles Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BUXL",
+      "company": "Buxly Paints Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BWCL",
+      "company": "Bestway Cement Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BWHL",
+      "company": "Baluchistan Wheels Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "BYCO",
+      "company": "Byco Petroleum Pakistan Limited",
+      "sector": "REFINERY",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CASH",
+      "company": "Calcorp Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CCM",
+      "company": "Crescent Cotton Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CECL",
+      "company": "Climax Engineering Company Limited",
+      "sector": "CABLE & ELECTRICAL GOODS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CENI",
+      "company": "Century Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CEPB",
+      "company": "Century Paper & Board Mills Limited",
+      "sector": "PAPER, BOARD & PACKAGING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CFL",
+      "company": "Crescent Fibres Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CHAS",
+      "company": "Chashma Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CHBL",
+      "company": "Chenab Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CHCC",
+      "company": "Cherat Cement Company Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CJPL",
+      "company": "Crescent Jute Products Limited",
+      "sector": "JUTE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CLCPS",
+      "company": "Chenab Limited (Pref)",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CLOUD",
+      "company": "Chakwal Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CLOV",
+      "company": "Clover Pakistan Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CLVL",
+      "company": "Cordoba Logistics & Ventures Limited",
+      "sector": "TRANSPORT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CNERGY",
+      "company": "Cnergyico PK  Limited",
+      "sector": "REFINERY",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "COLG",
+      "company": "Colgate-Palmolive (Pakistan) Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "COST",
+      "company": "(Colony) Sarhad Textile Mills Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "COTT",
+      "company": "COTT",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CPAL",
+      "company": "Capital Assets Leasing Corporation",
+      "sector": "LEASING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CPHL",
+      "company": "Citi Pharma Ltd.",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CPPL",
+      "company": "Cherat Packaging Limited",
+      "sector": "PAPER, BOARD & PACKAGING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CRTM",
+      "company": "The Crescent Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CSAP",
+      "company": "Crescent Steel & Allied Products Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CSIL",
+      "company": "Crescent Star Insurance Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CSILR3",
+      "company": "Crescent Star Insurance Limited (Right)",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CSM",
+      "company": "Cresent Standard Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CTM",
+      "company": "Colony Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CWSM",
+      "company": "Chakwal Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "CYAN",
+      "company": "Cyan Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DAAG",
+      "company": "Data Agro Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DADX",
+      "company": "Dadex Eternit Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DATM",
+      "company": "Data Textiles Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DAWH",
+      "company": "Dawood Hercules Corporation Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DBCI",
+      "company": "Dadabhoy Cement Industries Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DBSL",
+      "company": "Dadabhoy Sack Limited",
+      "sector": "PAPER, BOARD & PACKAGING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DCL",
+      "company": "Dewan Cement Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DCM",
+      "company": "Dawood Capital Management Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DCR",
+      "company": "Dolmen City REIT",
+      "sector": "REAL ESTATE INVESTMENT TRUST",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DCTL",
+      "company": "Dadabhoy Construction Technology Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DEL",
+      "company": "Dawood Equities Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DFML",
+      "company": "Dewan Farooque Motors Limited",
+      "sector": "AUTOMOBILE ASSEMBLER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DFSM",
+      "company": "Dewan Farooque Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DGKC",
+      "company": "D.G. Khan Cement Company Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DHPL",
+      "company": "DH Partners Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DIIL",
+      "company": "Diamond Industries Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DINT",
+      "company": "Din Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DKL",
+      "company": "Drekkar Kingsway Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DKTM",
+      "company": "Dewan Khalid Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DLL",
+      "company": "Dawood Lawrencepur Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DMC",
+      "company": "D.M. Corporation Limited.",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DMIL",
+      "company": "D.M. Industries Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DMTM",
+      "company": "Dewan Mushtaq Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DMTX",
+      "company": "D.M. Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DNCC",
+      "company": "Dandot Cement Company Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DOL",
+      "company": "Descon Oxychem Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DOLCPS",
+      "company": "Descon Oxychem Limited (12%Non-Voting Pref)",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DOMF",
+      "company": "Dominion Stock Fund Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DSFL",
+      "company": "Dewan Salman Fibre Limited",
+      "sector": "SYNTHETIC & RAYON",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DSIL",
+      "company": "D.S. Industries Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DSL",
+      "company": "Dost Steels Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DSML",
+      "company": "Dar-es-Salaam Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DWAE",
+      "company": "Dewan Automotive Engineering Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DWSM",
+      "company": "Dewan Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DWTM",
+      "company": "Dewan Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "DYNO",
+      "company": "Dynea Pakistan Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ECOP",
+      "company": "Ecopack Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EFERT",
+      "company": "Engro Fertilizers Limited",
+      "sector": "FERTILIZER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EFGH",
+      "company": "EFG Hermes Pakistan Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EFOODS",
+      "company": "Engro Foods Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EFUG",
+      "company": "EFU General Insurance Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EFUL",
+      "company": "EFU Life Assurance Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ELCM",
+      "company": "Elahi Cotton Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ELSM",
+      "company": "Ellcot Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EMCO",
+      "company": "Emco Industries Limited",
+      "sector": "CABLE & ELECTRICAL GOODS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ENGL",
+      "company": "English Leasing Limited",
+      "sector": "LEASING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ENGRO",
+      "company": "Engro Corporation Limited",
+      "sector": "FERTILIZER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ENGROH",
+      "company": "Engro Holdings Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EPCL",
+      "company": "Engro Polymer & Chemicals Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EPCLPS",
+      "company": "Engro Poly(Pref)",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EPCLR1",
+      "company": "EPCLR1",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EPQL",
+      "company": "Engro Powergen Qadirpur Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ESBL",
+      "company": "Escorts Investment Bank Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EWIC",
+      "company": "East West Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EWICR1",
+      "company": "East West (R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EWLA",
+      "company": "East West Life Assurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EXIDE",
+      "company": "Exide Pakistan Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "EXTR",
+      "company": "Extraction (Pakistan) Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FABL",
+      "company": "Faysal Bank Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FAEL",
+      "company": "Fatima Enterprises Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FANM",
+      "company": "First Al-Noor Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FASM",
+      "company": "Faisal Spinning Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FATIMA",
+      "company": "Fatima Fertilizer Company Limited",
+      "sector": "FERTILIZER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FCCL",
+      "company": "Fauji Cement Company Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FCEL",
+      "company": "First Capital Equities Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FCEPL",
+      "company": "Frieslandcampina Engro Pakistan Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FCIBL",
+      "company": "First Credit and Investment Bank Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FCL",
+      "company": "Fast Cables Limited",
+      "sector": "CABLE & ELECTRICAL GOODS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FCONM",
+      "company": "First Constellation Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FCSC",
+      "company": "First Capital Securities Corporation",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FDIBL",
+      "company": "First Dawood Investment Bank Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FDMF",
+      "company": "First Dawood Mutual Fund",
+      "sector": "CLOSE - END MUTUAL FUND",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FDPL",
+      "company": "First Dawood Properties Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FECM",
+      "company": "First Elite Capital Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FECTC",
+      "company": "Fecto Cement Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FEM",
+      "company": "First Equity Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FEROZ",
+      "company": "Ferozsons Laboratories Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FFBL",
+      "company": "Fauji Fertilizer Bin Qasim Limited",
+      "sector": "FERTILIZER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FFC",
+      "company": "Fauji Fertilizer Company Limited",
+      "sector": "FERTILIZER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FFL",
+      "company": "Fauji Foods Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FFLM",
+      "company": "First Fidelity Leasing Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FFLNV",
+      "company": "FFLNV",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FFLR1",
+      "company": "Fauji Foods Ltd(R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FHAM",
+      "company": "First Habib Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FIBLM",
+      "company": "First IBL Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FIL",
+      "company": "Fateh Industries Limited",
+      "sector": "LEATHER & TANNERIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FIM",
+      "company": "First Investec Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FIMM",
+      "company": "First Imrooz Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FLYNG",
+      "company": "Flying Cement Company Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FLYNGR1",
+      "company": "Flying Cement(R)",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FML",
+      "company": "Feroze1888 Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FNBM",
+      "company": "First National Bank Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FNEL",
+      "company": "First National Equities Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FPJM",
+      "company": "First Punjab Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FPRM",
+      "company": "First Paramount Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FPRMR2",
+      "company": "First Paramount Modaraba(Right)",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FRCL",
+      "company": "Frontier Ceramics Limited",
+      "sector": "GLASS & CERAMICS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FRSM",
+      "company": "Faran Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FSWL",
+      "company": "Fateh Sports Wear Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FTHM",
+      "company": "Fateh Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FTMM",
+      "company": "First Treet Manufacturing Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FTSM",
+      "company": "First Tri-Star Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FUDLM",
+      "company": "First UDL Modaraba",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "FZCM",
+      "company": "Fazal Cloth Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GADT",
+      "company": "Gadoon Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GAIL",
+      "company": "Ghani Automobile Industries Limited",
+      "sector": "AUTOMOBILE ASSEMBLER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GAILR1",
+      "company": "GAILR1",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GAL",
+      "company": "Ghandhara Automobiles Limited",
+      "sector": "AUTOMOBILE ASSEMBLER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GAMON",
+      "company": "Gammon Pakistan Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GASF",
+      "company": "Golden Arrow Selected Stocks",
+      "sector": "CLOSE - END MUTUAL FUND",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GATI",
+      "company": "Gatron (Industries) Limited",
+      "sector": "SYNTHETIC & RAYON",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GATM",
+      "company": "Gul Ahmed Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GCIL",
+      "company": "Ghani Chemical Industries Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GCILB",
+      "company": "Ghani Chemical Industries Limited (B)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GCWL",
+      "company": "Ghani Chemworld Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GCWLPRS",
+      "company": "Ghani Chemworld Limited(PRS)",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GCWLR",
+      "company": "Ghani Chemworld Limited Right",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GDL",
+      "company": "Ghani Dairies Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GEMBCEM",
+      "company": "Burj Clean Energy Modaraba(GEM)",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GEMBLUEX",
+      "company": "Blue-Ex Limited (GEM)",
+      "sector": "TRANSPORT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GEMMEL",
+      "company": "Mughal Energy Limited(GEM)",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GEMNETS",
+      "company": "Nets International Communication Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GEMPACRA",
+      "company": "The Pakistan Credit Rating Agency Ltd",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GEMPAPL",
+      "company": "Pak Agro Packaging Limited(GEM)",
+      "sector": "PAPER, BOARD & PACKAGING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GEMSPNL",
+      "company": "Supernet Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GEMUNSL",
+      "company": "Universal Network Systems Limited(GEM)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GENP",
+      "company": "Genertech Pakistan Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GFIL",
+      "company": "Ghazi Fabrics International Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GGGL",
+      "company": "Ghani Global Glass Limited",
+      "sector": "GLASS & CERAMICS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GGGLR1",
+      "company": "Ghani Global(R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GGL",
+      "company": "Ghani Global Holdings Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GGLR1",
+      "company": "Ghani Global(R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GHGL",
+      "company": "Ghani Glass Limited",
+      "sector": "GLASS & CERAMICS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GHGLR1",
+      "company": "GHGLR1",
+      "sector": "GLASS & CERAMICS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GHNI",
+      "company": "Ghandhara Industries Limited",
+      "sector": "AUTOMOBILE ASSEMBLER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GHNL",
+      "company": "Ghandhara Nissan Limited",
+      "sector": "AUTOMOBILE ASSEMBLER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GIL",
+      "company": "Good Luck Industries Ltd.",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GLAT",
+      "company": "Glamour Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GLAXO",
+      "company": "GlaxoSmithKline Pakistan Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GLOT",
+      "company": "Globe Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GLPL",
+      "company": "Gillette Pakistan Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GOC",
+      "company": "GOC (Pak) Limited.",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GOEM",
+      "company": "Globe Textile Mills (OE) Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GRR",
+      "company": "Globe Residency REIT",
+      "sector": "REAL ESTATE INVESTMENT TRUST",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GRYL",
+      "company": "Grays Leasing Limited",
+      "sector": "LEASING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GSKCH",
+      "company": "GlaxoSmithKline Consumer Healthcare",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GSPM",
+      "company": "Gulshan Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GTECH",
+      "company": "G3 Technologies Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GTECHBR",
+      "company": "G3 Technologies Ltd.CLASS B",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GTYR",
+      "company": "Ghandhara Tyre & Rubber Company Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GUSM",
+      "company": "Gulistan Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GUTM",
+      "company": "Gulistan Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GVGL",
+      "company": "Ghani Value Glass Limited",
+      "sector": "GLASS & CERAMICS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "GWLC",
+      "company": "Gharibwal Cement Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HABSM",
+      "company": "Habib Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HACC",
+      "company": "Hashimi Can Company Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HADC",
+      "company": "Haydari Construction Company Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HAEL",
+      "company": "Hala Enterprises Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HAFL",
+      "company": "Hafiz Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HAJT",
+      "company": "Hajra Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HAL",
+      "company": "Habib-ADM Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HALEON",
+      "company": "Haleon Pakistan Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HASCOL",
+      "company": "Hascol Petroleum Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HASCOLR1",
+      "company": "Hascol Petre(R)",
+      "sector": "OIL & GAS MARKETING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HATM",
+      "company": "Hamid Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HBL",
+      "company": "Habib Bank Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HBLTETF",
+      "company": "HBL Total Treasury (ETF)",
+      "sector": "EXCHANGE TRADED FUNDS",
+      "status": "Listed",
+      "instrumentType": "ETF",
+      "isETF": true,
+      "isDebt": false
+    },
+    {
+      "symbol": "HCAR",
+      "company": "Honda Atlas Cars (Pakistan) Limited",
+      "sector": "AUTOMOBILE ASSEMBLER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HCL",
+      "company": "Hallmark Company Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HGFA",
+      "company": "HBL Growth Fund",
+      "sector": "CLOSE - END MUTUAL FUND",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HICL",
+      "company": "Habib Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HIFA",
+      "company": "HBL Investment Fund",
+      "sector": "CLOSE - END MUTUAL FUND",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HINO",
+      "company": "Hinopak Motors Limited",
+      "sector": "AUTOMOBILE ASSEMBLER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HINOON",
+      "company": "Highnoon Laboratories Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HIRAT",
+      "company": "Hira Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HKKT",
+      "company": "Hakkim Textile Mills Limited",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HMB",
+      "company": "Habib Metropolitan Bank Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HMICL",
+      "company": "Hallmark Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HMIM",
+      "company": "Haji Mohammad Ismail Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HMM",
+      "company": "Habib Metro Mod",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HPL",
+      "company": "Hoechst Pakistan Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HRPL",
+      "company": "Habib Rice Product Limited.",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HSM",
+      "company": "Husein Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HSMCPS",
+      "company": "Husein Sugar(Pref)",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HSMPSR",
+      "company": "Husein Sugar(R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HSMR1",
+      "company": "HSMR1",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HSPI",
+      "company": "Huffaz Seamless Pipe Industries Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HTL",
+      "company": "Hi-Tech Lubricants Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HUBC",
+      "company": "The Hub Power Company Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HUMNL",
+      "company": "Hum Network Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HUSI",
+      "company": "Husein Industries Limited",
+      "sector": "PROPERTY",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "HWQS",
+      "company": "Haseeb Waqas Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IBFL",
+      "company": "Ibrahim Fibres Limited",
+      "sector": "SYNTHETIC & RAYON",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IBLHL",
+      "company": "IBL HealthCare Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ICCI",
+      "company": "ICC Industries Limited",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ICCT",
+      "company": "ICC Textiles Limited",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ICI",
+      "company": "ICI Pakistan Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ICIBL",
+      "company": "Invest Capital Investment Bank Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ICL",
+      "company": "Ittehad Chemicals Limted",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ICLR1",
+      "company": "ICLR1",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IDEAL",
+      "company": "Ideal Dynamics Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IDRT",
+      "company": "Idrees Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IDSM",
+      "company": "Ideal Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IDYM",
+      "company": "Indus Dyeing & Manufacturing Co. Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IFSL",
+      "company": "Invest & Finance Securities Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IGIBL",
+      "company": "IGI Investment Bank Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IGIHL",
+      "company": "IGI Holdings Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IGIIL",
+      "company": "IGI Insurance Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IGIL",
+      "company": "IGI Life Insurance Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ILP",
+      "company": "Interloop Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ILTM",
+      "company": "Island Textile Mills Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IMAGE",
+      "company": "Image Pakistan Limited",
+      "sector": "APPAREL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IMAGER1",
+      "company": "Image Pak Ltd(R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IML",
+      "company": "Imperial  Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IMS",
+      "company": "Intermarket Securities Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IMSL",
+      "company": "Imperial Sugar Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "INDU",
+      "company": "Indus Motor Company Limited",
+      "sector": "AUTOMOBILE ASSEMBLER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "INIL",
+      "company": "International Industries Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "INKL",
+      "company": "International Knitwear Limited",
+      "sector": "APPAREL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "INL",
+      "company": "INL",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "INMF",
+      "company": "Investec Mutual Fund Limited",
+      "sector": "CLOSE - END MUTUAL FUND",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IPAK",
+      "company": "International Packaging Films Limited",
+      "sector": "PAPER, BOARD & PACKAGING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "IREIT",
+      "company": "Image Reit",
+      "sector": "REAL ESTATE INVESTMENT TRUST",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ISHT",
+      "company": "Ishtiaq Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ISIL",
+      "company": "Ismail Industries Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ISL",
+      "company": "International Steels Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ISTM",
+      "company": "Ishaq Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ITANZ",
+      "company": "Itanz Technologies Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ITSL",
+      "company": "Investec Securities Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ITTEFAQ",
+      "company": "Ittefaq Iron Industries Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JATM",
+      "company": "J.A. Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JDMT",
+      "company": "Janana De Malucho Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JDWS",
+      "company": "JDW Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JGICL",
+      "company": "Jubilee General Insurance Company Ltd.",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JKSM",
+      "company": "J.K. Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JLICL",
+      "company": "Jubilee Life Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JOPP",
+      "company": "Johnson & Phillips (Pakistan) Limited",
+      "sector": "CABLE & ELECTRICAL GOODS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JOVC",
+      "company": "Javed Omer Vohra & Company Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JPGL",
+      "company": "Japan Power Generation Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JSBL",
+      "company": "JS Bank Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JSBLR1",
+      "company": "JS Bank Limited Right (R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JSCL",
+      "company": "Jahangir Siddiqui & Co. Ltd.",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JSCLR1",
+      "company": "Jahangi Sidd(R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JSGBETF",
+      "company": "JS Global Banking Sector(ETF)",
+      "sector": "EXCHANGE TRADED FUNDS",
+      "status": "Listed",
+      "instrumentType": "ETF",
+      "isETF": true,
+      "isDebt": false
+    },
+    {
+      "symbol": "JSGCL",
+      "company": "JS Global Capital Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JSIL",
+      "company": "JS Investments Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JSMFETF",
+      "company": "JS Momentum Factor Exchange Traded Fund",
+      "sector": "EXCHANGE TRADED FUNDS",
+      "status": "Listed",
+      "instrumentType": "ETF",
+      "isETF": true,
+      "isDebt": false
+    },
+    {
+      "symbol": "JSML",
+      "company": "Jauharabad Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JSRR",
+      "company": "JS Rental REIT",
+      "sector": "REAL ESTATE INVESTMENT TRUST",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JUBS",
+      "company": "Jubilee Spinning & Weaving Mills Ltd.",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JVDC",
+      "company": "Javedan Corporation Limited",
+      "sector": "PROPERTY",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JVDCPS",
+      "company": "Javedan Corporation (Pref)",
+      "sector": "PROPERTY",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "JVDCR1",
+      "company": "JVDCR1",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KACM",
+      "company": "Karim Cotton Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KAKL",
+      "company": "Kaiser Arts & Krafts Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KAPCO",
+      "company": "Kot Addu Power Company Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KASBM",
+      "company": "KASB Modaraba",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KCL",
+      "company": "Karam Ceramics Limited",
+      "sector": "GLASS & CERAMICS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KEL",
+      "company": "K-Electric Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KHSM",
+      "company": "Khurshid Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KHTC",
+      "company": "Khyber Tobacco Company Limited",
+      "sector": "TOBACCO",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KHYT",
+      "company": "Khyber Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KML",
+      "company": "Kohinoor Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KOHC",
+      "company": "Kohat Cement Company Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KOHE",
+      "company": "Kohinoor Energy Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KOHP",
+      "company": "Kohinoor Power Company Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KOHTM",
+      "company": "Kohat Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KOIL",
+      "company": "Kohinoor Industries Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KOSM",
+      "company": "Kohinoor Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KPUS",
+      "company": "Khairpur Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KSBP",
+      "company": "KSB Pumps Company Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KSTM",
+      "company": "Khalid Siraj Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "KTML",
+      "company": "Kohinoor Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LCI",
+      "company": "Lucky Core Industries Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LEUL",
+      "company": "Leather Up Limited",
+      "sector": "LEATHER & TANNERIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LINDE",
+      "company": "Linde Pakistan Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LIVEN",
+      "company": "Liven Pharma Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LIVENR",
+      "company": "Liven Pharma Limited(Right)",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LMSM",
+      "company": "Landmark Spinning Industries Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LOADS",
+      "company": "Loads Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LOADSR1",
+      "company": "LOADS Limited (Right)",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LOTCHEM",
+      "company": "Lotte Chemical Pakistan Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LPCL",
+      "company": "Lafarge Pakistan Cement Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LPGL",
+      "company": "Leiner Pak Gelatine Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LPL",
+      "company": "Lalpir Power Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LSECL",
+      "company": "LSE Capital Limited.",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LSECLR",
+      "company": "LSE Capital Limited.(Right)",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LSEFSL",
+      "company": "LSE Financial Services Limited.",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LSEPL",
+      "company": "LSE Proptech Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LSEVL",
+      "company": "LSE Ventures Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LSEVLR",
+      "company": "LSE Ventures Limited(RIGHT)",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "LUCK",
+      "company": "Lucky Cement Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MACFL",
+      "company": "MACPAC Films Limited",
+      "sector": "PAPER, BOARD & PACKAGING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MACTER",
+      "company": "Macter International Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MARI",
+      "company": "Mari Energies Limited",
+      "sector": "OIL & GAS EXPLORATION COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MCB",
+      "company": "MCB Bank Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MCBAH",
+      "company": "MCB-Arif Habib Savings and Invest",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MCBIM",
+      "company": "MCB Investment Management Limited.",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MDTL",
+      "company": "Media Times Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MDTM",
+      "company": "Mehr Dastgir Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MEBL",
+      "company": "Meezan Bank Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MEHT",
+      "company": "Mehmood Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MERIT",
+      "company": "Merit Packaging Limited",
+      "sector": "PAPER, BOARD & PACKAGING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MERITR1",
+      "company": "MERITR1",
+      "sector": "PAPER, BOARD & PACKAGING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "META",
+      "company": "MetaTech Trading Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MFFL",
+      "company": "Mitchells Fruit Farms Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MFFLR1",
+      "company": "Mitchells Fruit Farms Limited(Right)",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MFL",
+      "company": "Matco Foods Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MFTM",
+      "company": "Mohammad Farooq Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MIIETF",
+      "company": "Mahaana Islamic Index ETF",
+      "sector": "EXCHANGE TRADED FUNDS",
+      "status": "Listed",
+      "instrumentType": "ETF",
+      "isETF": true,
+      "isDebt": false
+    },
+    {
+      "symbol": "MIRKS",
+      "company": "Mirpurkhas Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MLCF",
+      "company": "Maple Leaf Cement Factory Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MLCFR1",
+      "company": "Maple Leaf (R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MODAM",
+      "company": "Modaraba Al-Mali",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MODAMR1",
+      "company": "MODARABA AL-MALI (R)",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MOHE",
+      "company": "Mohib Exports Limited",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MOIL",
+      "company": "Morafco Industries Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MOON",
+      "company": "Moonlite (Pak) Limited",
+      "sector": "WOOLLEN",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MQTM",
+      "company": "Maqbool Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MRNS",
+      "company": "Mehran Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MSCL",
+      "company": "Metropolitan Steel Corporation Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MSOT",
+      "company": "Masood Textile Mills Limited",
+      "sector": "APPAREL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MSOTPS",
+      "company": "Masood Textile (Pref)",
+      "sector": "APPAREL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MTIL",
+      "company": "Mian Textile Industries Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MTL",
+      "company": "Millat Tractors Limited",
+      "sector": "AUTOMOBILE ASSEMBLER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MUBT",
+      "company": "Mubarak Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MUGHAL",
+      "company": "Mughal Iron & Steel Industries Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MUGHALC",
+      "company": "Mughal Iron & Steel Industries Ltd(C)",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MUGHALR1",
+      "company": "Mughal Iron (R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MUKT",
+      "company": "Mukhtar Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MUREB",
+      "company": "Murree Brewery Company Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MWMP",
+      "company": "Mandviwala Mauser Plastic Industries",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "MZNPETF",
+      "company": "Meezan Pakistan ETF",
+      "sector": "EXCHANGE TRADED FUNDS",
+      "status": "Listed",
+      "instrumentType": "ETF",
+      "isETF": true,
+      "isDebt": false
+    },
+    {
+      "symbol": "MZSM",
+      "company": "Mirza Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NAFL",
+      "company": "National Fibres Limited",
+      "sector": "SYNTHETIC & RAYON",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NAGC",
+      "company": "Nagina Cotton Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NATF",
+      "company": "National Foods Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NATM",
+      "company": "Nadeem Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NBP",
+      "company": "National Bank of Pakistan",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NBPGETF",
+      "company": "NBP Pakistan  Growth ETF",
+      "sector": "EXCHANGE TRADED FUNDS",
+      "status": "Listed",
+      "instrumentType": "ETF",
+      "isETF": true,
+      "isDebt": false
+    },
+    {
+      "symbol": "NCL",
+      "company": "Nishat Chunian Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NCML",
+      "company": "Nazir Cotton Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NCPL",
+      "company": "Nishat Chunian Power Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NESTLE",
+      "company": "Nestle Pakistan Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NETSOL",
+      "company": "NetSol Technologies Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NEXT",
+      "company": "Next Capital Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NIB",
+      "company": "NIB Bank Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NICL",
+      "company": "Nimir Industrial Chemicals Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NINA",
+      "company": "Nina Industries Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NITGETF",
+      "company": "NIT Pakistan Gateway ETF",
+      "sector": "EXCHANGE TRADED FUNDS",
+      "status": "Listed",
+      "instrumentType": "ETF",
+      "isETF": true,
+      "isDebt": false
+    },
+    {
+      "symbol": "NMFL",
+      "company": "Nirala MSR Foods Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NML",
+      "company": "Nishat Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NONS",
+      "company": "Noon Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NORS",
+      "company": "Noor Silk Mills Limited",
+      "sector": "SYNTHETIC & RAYON",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NPL",
+      "company": "Nishat Power Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NPSM",
+      "company": "N. P. Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NRL",
+      "company": "National Refinery Limited",
+      "sector": "REFINERY",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NRSL",
+      "company": "Nimir Resins Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NSRM",
+      "company": "The National Silk & Rayon Mills Limited",
+      "sector": "SYNTHETIC & RAYON",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "OBOY",
+      "company": "Oilboy Energy Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "OBOYR1",
+      "company": "Oilboy Energy(R)",
+      "sector": "OIL & GAS MARKETING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "OCTOPUS",
+      "company": "Octopus Digital Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "OGDC",
+      "company": "Oil & Gas Development Company Limited",
+      "sector": "OIL & GAS EXPLORATION COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "OLPL",
+      "company": "OLP Financial Services Pakistan Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "OLPM",
+      "company": "OLP Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "OLSM",
+      "company": "Olympia Spinning and Weaving Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "OML",
+      "company": "Olympia Mills Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ORIXM",
+      "company": "Orix Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ORM",
+      "company": "Orient Rental Mod",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "OTSU",
+      "company": "Otsuka Pakistan Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PABC",
+      "company": "Pakistan Aluminium Beverage Cans Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PACE",
+      "company": "Pace (Pakistan) Limited",
+      "sector": "PROPERTY",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PAEL",
+      "company": "Pak Elektron Limited",
+      "sector": "CABLE & ELECTRICAL GOODS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PAKCEM",
+      "company": "Pakcem Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PAKD",
+      "company": "Pak Datacom Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PAKL",
+      "company": "Pak Leather Crafts Limited",
+      "sector": "LEATHER & TANNERIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PAKMI",
+      "company": "First Pak Modaraba",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PAKOXY",
+      "company": "Pakistan Oxygen Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PAKQATAR",
+      "company": "Pak Qatar Family Takaful Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PAKRI",
+      "company": "Pakistan Reinsurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PAKT",
+      "company": "Pakistan Tobacco Company Limited",
+      "sector": "TOBACCO",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PASL",
+      "company": "Pervez Ahmed Consultancy Services Ltd.",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PASM",
+      "company": "Paramount Spinning Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PCAL",
+      "company": "Pakistan Cables Limited",
+      "sector": "CABLE & ELECTRICAL GOODS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PCML",
+      "company": "Punjab Cotton Mill",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PDGH",
+      "company": "Prudential Discourt & Guarantee House Lt",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PECO",
+      "company": "Pakistan Engineering Company Limited",
+      "sector": "ENGINEERING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PGCL",
+      "company": "Pakistan Gum & Chemicals Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PGF",
+      "company": "PICIC Growth Fund",
+      "sector": "CLOSE - END MUTUAL FUND",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PGIC",
+      "company": "Pakistan Guarantee Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PGLC",
+      "company": "Pak-Gulf Leasing Company Limited",
+      "sector": "LEASING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PHDL",
+      "company": "Pakistan Hotels Developers Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PIAA",
+      "company": "Pakistan International Airlines Corp",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PIAB",
+      "company": "Pakistan International Airlines Corporat",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PIAHCLA",
+      "company": "PIA Holding Company Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PIAHCLB",
+      "company": "PIA Holding Company LimitedB",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PIBTL",
+      "company": "Pakistan International Bulk Terminal",
+      "sector": "TRANSPORT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PICL",
+      "company": "Pakistan Industrial & Commercial Leasing",
+      "sector": "LEASING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PICT",
+      "company": "Pakistan International Container",
+      "sector": "TRANSPORT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PIF",
+      "company": "PICIC Investment Fund",
+      "sector": "CLOSE - END MUTUAL FUND",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PIL",
+      "company": "PICIC Insurance Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PIM",
+      "company": "Popular Islamic Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PINL",
+      "company": "Premier Insurance Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PIOC",
+      "company": "Pioneer Cement Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PKGI",
+      "company": "The Pakistan General Insurance Co. Ltd.",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PKGP",
+      "company": "Pakgen Power Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PKGS",
+      "company": "Packages Limited",
+      "sector": "PAPER, BOARD & PACKAGING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PMI",
+      "company": "First Prudential Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PMPK",
+      "company": "Philip Morris (Pakistan) Limited",
+      "sector": "TOBACCO",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PMRS",
+      "company": "The Premier Sugar Mills",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PNGRS",
+      "company": "Pangrio Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PNSC",
+      "company": "Pakistan National Shipping Corporation",
+      "sector": "TRANSPORT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "POL",
+      "company": "Pakistan Oilfields Limited",
+      "sector": "OIL & GAS EXPLORATION COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "POML",
+      "company": "Punjab Oil Mills Limited",
+      "sector": "VANASPATI & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "POWER",
+      "company": "Power Cement Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "POWERPS",
+      "company": "Power Cement (Pref)",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "POWERR1",
+      "company": "Power Cement (R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PPL",
+      "company": "Pakistan Petroleum Limited",
+      "sector": "OIL & GAS EXPLORATION COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PPP",
+      "company": "Pakistan Paper Products Limited",
+      "sector": "PAPER, BOARD & PACKAGING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PPVC",
+      "company": "Pakistan PVC Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PQGTL",
+      "company": "Pak Qatar General Takaful Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PREMA",
+      "company": "At-Tahur Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PRET",
+      "company": "Premium Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PRIB",
+      "company": "Prudential Investment Bank Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PRIC",
+      "company": "Progressive Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PRL",
+      "company": "Pakistan Refinery Limited",
+      "sector": "REFINERY",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PRLR1",
+      "company": "Pak Refinery (R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PRWM",
+      "company": "Prosperity Weaving Mills Limited",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PSEL",
+      "company": "Pakistan Services Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PSMC",
+      "company": "Pak Suzuki Motor Company Limited",
+      "sector": "AUTOMOBILE ASSEMBLER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PSO",
+      "company": "Pakistan State Oil Company Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PSX",
+      "company": "Pakistan Stock Exchange Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PSYL",
+      "company": "Pakistan Synthetics Limited",
+      "sector": "SYNTHETIC & RAYON",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PTC",
+      "company": "Pakistan Telecommunication Company Ltd",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PTL",
+      "company": "Panther Tyres Ltd.",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "PUDF",
+      "company": "Prudential Stocks Fund Limited",
+      "sector": "CLOSE - END MUTUAL FUND",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "QTECH",
+      "company": "Quantum Data Technologies Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "QUET",
+      "company": "Quetta Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "QUICE",
+      "company": "Quice Food Industries Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "QUSW",
+      "company": "Quality Steel Works Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "RAVT",
+      "company": "Ravi Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "RCML",
+      "company": "Reliance Cotton Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "REDCO",
+      "company": "Redco Textiles Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "REGAL",
+      "company": "Regal Ceramics Limited",
+      "sector": "GLASS & CERAMICS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "REWM",
+      "company": "Reliance Weaving Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "RICL",
+      "company": "Reliance Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "RMPL",
+      "company": "Rafhan Maize Products Company Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "RPL",
+      "company": "Roshan Packages Limited",
+      "sector": "PAPER, BOARD & PACKAGING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "RUBY",
+      "company": "Ruby Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "RUPL",
+      "company": "Rupali Polyester Limited",
+      "sector": "SYNTHETIC & RAYON",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SAIF",
+      "company": "Saif Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SALT",
+      "company": "Salfi Textile Mills Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SANE",
+      "company": "Salman Noman Enterprises Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SANSM",
+      "company": "Sanghar Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SAPL",
+      "company": "Sanofi-Aventis Pakistan Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SAPT",
+      "company": "Sapphire Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SARC",
+      "company": "Sardar Chemical Industries Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SASML",
+      "company": "Sindh Abadgars Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SAZEW",
+      "company": "Sazgar Engineering Works Limited",
+      "sector": "AUTOMOBILE ASSEMBLER",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SBL",
+      "company": "Samba Bank Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SCBPL",
+      "company": "Standard Chartered Bank (Pak) Ltd",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SCHT",
+      "company": "Schon Textiles Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SCL",
+      "company": "Shield Corporation Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SDIL",
+      "company": "Saleem Denim Industries Limited",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SDOT",
+      "company": "Sadoon Textile Industries Limited",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SEARL",
+      "company": "The Searle Company Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SEARLR1",
+      "company": "Searl Company(R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SEL",
+      "company": "Sitara Energy Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SELECT",
+      "company": "Select Technologies Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SEPCO",
+      "company": "Southern Electric Power Company Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SEPL",
+      "company": "Security Papers Limited",
+      "sector": "PAPER, BOARD & PACKAGING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SERF",
+      "company": "Service Fabrics Limited",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SERT",
+      "company": "Service Industries Textiles Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SFAT",
+      "company": "Safa Textiles Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SFL",
+      "company": "Sapphire Fibres Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SFLL",
+      "company": "SFL Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SGABL",
+      "company": "SG.Allied Businesses Limited",
+      "sector": "SYNTHETIC & RAYON",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SGF",
+      "company": "Service GlobalFootwear Limited",
+      "sector": "LEATHER & TANNERIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SGFL",
+      "company": "S.G.Fiber Limited",
+      "sector": "SYNTHETIC & RAYON",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SGPL",
+      "company": "S.G. Power Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SGPLR",
+      "company": "S.G.Power Limited(RIGHT)",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SHCI",
+      "company": "Shaffi Chemical Industries Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SHCM",
+      "company": "Shadman Cotton Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SHDT",
+      "company": "Shadab Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SHDTR1",
+      "company": "Shadab Textile Mills Limited(Right)",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SHEL",
+      "company": "Shell Pakistan Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SHEZ",
+      "company": "Shezan International Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SHFA",
+      "company": "Shifa International Hospitals Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SHJS",
+      "company": "Shahtaj Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SHNI",
+      "company": "Shaheen Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SHSML",
+      "company": "Shahmurad Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SIBL",
+      "company": "Security Investment Bank Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SICL",
+      "company": "Standard Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SIEM",
+      "company": "Siemens (Pakistan) Engineering",
+      "sector": "CABLE & ELECTRICAL GOODS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SILK",
+      "company": "Silkbank Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SINDM",
+      "company": "Sindh Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SING",
+      "company": "Singer Pakistan",
+      "sector": "CABLE & ELECTRICAL GOODS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SITC",
+      "company": "Sitara Chemical Industries Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SJTM",
+      "company": "Sajjad Textile Mills Limited",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SKRS",
+      "company": "Sakrand Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SLCL",
+      "company": "Security Leasing Corporation Limited",
+      "sector": "LEASING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SLGL",
+      "company": "Secure Logistics-Trax Group Limited",
+      "sector": "TRANSPORT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SLL",
+      "company": "SME Leasing Limited",
+      "sector": "LEASING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SLM",
+      "company": "Service Long March Tyres Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SLSO",
+      "company": "Saleem Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SLSOPP",
+      "company": "SLSOPP",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SLSOPVI",
+      "company": "SLSOPVI",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SLYT",
+      "company": "Sally Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SMBL",
+      "company": "Summit Bank Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SMBLCPSA",
+      "company": "Summit Bank",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SMBLCPSB",
+      "company": "Summit Bank B",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SMCPL",
+      "company": "Safe Mix Concrete Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SML",
+      "company": "Shakarganj Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SMLR1",
+      "company": "SMLR1",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SMTM",
+      "company": "Samin Textiles Limited",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SNAI",
+      "company": "Sana Industries Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SNBL",
+      "company": "Soneri Bank Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SNGP",
+      "company": "Sui Northern Gas Pipelines Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SPAC1",
+      "company": "LSE SPAC-I Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SPAC2",
+      "company": "LSE SPAC-II Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SPCL",
+      "company": "Saudi Pak Consultancy Company Limited",
+      "sector": "LEASING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SPEL",
+      "company": "SPEL Limited",
+      "sector": "PAPER, BOARD & PACKAGING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SPL",
+      "company": "Sitara Peroxide Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SPLC",
+      "company": "Saudi Pak Leasing Company Limited",
+      "sector": "LEASING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SPLCTFC3",
+      "company": "SPLCTFC3",
+      "sector": "LEASING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SPSL",
+      "company": "Sitara Petroleum Service Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SPWL",
+      "company": "Saif Power Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SRR",
+      "company": "Signature Residency Reit",
+      "sector": "REAL ESTATE INVESTMENT TRUST",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SRSM",
+      "company": "Sargodha Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SRVI",
+      "company": "Service Industries Limited",
+      "sector": "LEATHER & TANNERIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SSGC",
+      "company": "Sui Southern Gas Company Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SSIC",
+      "company": "Silver Star Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SSML",
+      "company": "Saritow Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SSOM",
+      "company": "S.S.Oil Mills Limited",
+      "sector": "VANASPATI & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "STCL",
+      "company": "Shabbir Tiles & Ceramics Limited",
+      "sector": "GLASS & CERAMICS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "STJT",
+      "company": "Shahtaj Textile Limited",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "STL",
+      "company": "Supernet Technologies Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "STLR",
+      "company": "Supernet Technologies Limited.(Right)",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "STML",
+      "company": "Shams Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "STPL",
+      "company": "Siddiqsons Tin Plate Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "STYLERS",
+      "company": "Stylers International Limited",
+      "sector": "APPAREL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SUCM",
+      "company": "Sunshine Cotton Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SUHJ",
+      "company": "Suhail Jute Mills Limited",
+      "sector": "JUTE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SURAJ",
+      "company": "Suraj Ghee Industries Limited",
+      "sector": "VANASPATI & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SURC",
+      "company": "Suraj Cotton Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SUTM",
+      "company": "Sunrays Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SWL",
+      "company": "Standard Worldwide Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SYM",
+      "company": "Symmetry Group Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SYS",
+      "company": "Systems Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SZTM",
+      "company": "Shahzad Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TAJT",
+      "company": "Taj Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TATM",
+      "company": "Tata Textile Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TBL",
+      "company": "Treet Battery Limited.",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TCLTC",
+      "company": "Treet Corporation (Ptc)",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TCORP",
+      "company": "Tariq Corporation Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TCORPCPS",
+      "company": "Tariq Corporation Limited(Pref)",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TCORPR1",
+      "company": "Tariq Corporation (Pvt) Ltd (R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TCORPR2",
+      "company": "Tariq Corporation Limited(Right)",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TDIL",
+      "company": "TPL Direct Insurance Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TELE",
+      "company": "Telecard Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TGL",
+      "company": "Tariq Glass Industries Limited",
+      "sector": "GLASS & CERAMICS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "THALL",
+      "company": "Thal Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "THAS",
+      "company": "Taha Spinning Mills Limited",
+      "sector": "TEXTILE SPINNING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "THCCL",
+      "company": "Thatta Cement Company Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TICL",
+      "company": "The Thal Industries Corporation Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TISL",
+      "company": "Tasdeeq Information Services Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TOMCL",
+      "company": "The Organic Meat Company Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TOWL",
+      "company": "Towellers Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TPL",
+      "company": "TPL Corp Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TPLI",
+      "company": "TPL Insurance Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TPLL",
+      "company": "TPL Life Insurance Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TPLP",
+      "company": "TPL Properties Limited",
+      "sector": "PROPERTY",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TPLRF1",
+      "company": "TPL REIT Fund I",
+      "sector": "REAL ESTATE INVESTMENT TRUST",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TPLT",
+      "company": "TPL Trakker Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TREET",
+      "company": "Treet Corporation Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TREI",
+      "company": "Transmission Engineering Industries Limited",
+      "sector": "AUTOMOBILE PARTS & ACCESSORIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TRG",
+      "company": "TRG Pakistan Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TRIBL",
+      "company": "Trust Investment Bank Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TRIPF",
+      "company": "Tri-Pack Films Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TRPOL",
+      "company": "Tri-Star Polyester Limited",
+      "sector": "SYNTHETIC & RAYON",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TRSM",
+      "company": "Trust Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TSBL",
+      "company": "Trust Securities & Brokerage Limited",
+      "sector": "INV. BANKS / INV. COS. / SECURITIES COS.",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TSMF",
+      "company": "Tri-Star Mutual Fund Limited",
+      "sector": "CLOSE - END MUTUAL FUND",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TSML",
+      "company": "Tandlianwala Sugar Mills Limited",
+      "sector": "SUGAR & ALLIED INDUSTRIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "TSPL",
+      "company": "Tri-Star Power Limited",
+      "sector": "POWER GENERATION & DISTRIBUTION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "UBDL",
+      "company": "United Brands Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "UBL",
+      "company": "United Bank Limited",
+      "sector": "COMMERCIAL BANKS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "UBLGSFO",
+      "company": "UBLGSFO",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "UBLPETF",
+      "company": "UBLPakistan Enterprise ETF",
+      "sector": "EXCHANGE TRADED FUNDS",
+      "status": "Listed",
+      "instrumentType": "ETF",
+      "isETF": true,
+      "isDebt": false
+    },
+    {
+      "symbol": "UCAPM",
+      "company": "Unicap Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "UDLI",
+      "company": "UDL International Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "UDPL",
+      "company": "United Distributors Pakistan Limited",
+      "sector": "MISCELLANEOUS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "UNIC",
+      "company": "The United Insurance Company",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "UNITY",
+      "company": "Unity Foods Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "UNITYR1",
+      "company": "Unity Foods(R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "UPFL",
+      "company": "Unilever Pakistan Foods Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "USMT",
+      "company": "Usman Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "UVIC",
+      "company": "The Universal Insurance Company Limited",
+      "sector": "INSURANCE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "WAFI",
+      "company": "Wafi Energy Pakistan Limited",
+      "sector": "OIL & GAS MARKETING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "WAHDAT",
+      "company": "Wahdat Poultry Farm Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "WAHN",
+      "company": "Wah Noble Chemicals Limited",
+      "sector": "CHEMICAL",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "WASL",
+      "company": "Wasl Mobility Modaraba",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "WASLR",
+      "company": "Wasl Mobility Modaraba(Right)",
+      "sector": "MODARABAS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "WAVES",
+      "company": "Waves Corporation Limited",
+      "sector": "CABLE & ELECTRICAL GOODS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "WAVESAPP",
+      "company": "Waves Home Appliances Limited",
+      "sector": "CABLE & ELECTRICAL GOODS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "WAVESR1",
+      "company": "Waves Singer Pakistan Limited (R)",
+      "sector": "Unclassified",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "WHALE",
+      "company": "Waves Home Appliances Limited",
+      "sector": "CABLE & ELECTRICAL GOODS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "WTL",
+      "company": "Worldcall Telecom Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "WYETH",
+      "company": "Wyeth Pakistan Limited",
+      "sector": "PHARMACEUTICALS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "YOUW",
+      "company": "Yousaf Weaving Mills Limited",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ZAHID",
+      "company": "Zahidjee Textile Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ZAL",
+      "company": "Zarea Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ZELP",
+      "company": "Zeal Pak Cement Factory Limited",
+      "sector": "CEMENT",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ZHCM",
+      "company": "Zahur Cotton Mills Limited",
+      "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ZIL",
+      "company": "ZIL Limited",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ZTL",
+      "company": "Zephyr Textiles Limited",
+      "sector": "TEXTILE WEAVING",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "ZUMA",
+      "company": "Zuma Resources Limited",
+      "sector": "TECHNOLOGY & COMMUNICATION",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    }
   ]
 }
