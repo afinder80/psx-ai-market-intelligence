@@ -2,6 +2,11 @@ name: Update PSX Reference Universe
 
 on:
   workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - "scripts/update_universe.py"
+      - ".github/workflows/update-universe.yml"
   schedule:
     # Daily reference-data check at 01:30 UTC / 06:30 PKT on weekdays.
     - cron: "30 1 * * 1-5"
@@ -27,7 +32,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Update universe master
+      - name: Update universe master from official PSX symbols reference
         env:
           PSX_UNIVERSE_URL: ${{ secrets.PSX_UNIVERSE_URL }}
           PSX_UNIVERSE_TOKEN: ${{ secrets.PSX_UNIVERSE_TOKEN }}
