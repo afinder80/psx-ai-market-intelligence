@@ -1,33 +1,9 @@
 #!/usr/bin/env python3
 """Merge an authorized PSX market-data feed into data/market.json.
 
-This script intentionally does not scrape PSX public web pages. Configure an
-endpoint for which the dashboard owner has market-data redistribution rights.
-
-Expected feed shape (extra fields are ignored):
-{
-  "asOf": "2026-08-24T10:30:00+05:00",
-  "provider": "PSX Licensed Feed",
-  "market": {
-    "kse100": 177000.0,
-    "kse100Change": 0.2,
-    "allShare": 107000.0,
-    "allShareChange": 0.1,
-    "ogti": 35000.0,
-    "ogtiChange": 0.5
-  },
-  "stocks": [
-    {
-      "symbol": "KEL",
-      "price": 7.25,
-      "change": 1.1,
-      "avgVol": 25000000,
-      "pe": 8.2,
-      "lowestValue": 1.23,
-      "highestValue": 15.40
-    }
-  ]
-}
+The updater supports the full PSX universe. New symbols from the authorized feed
+are appended automatically instead of being discarded. Existing research/model
+fields and verified historical extrema are preserved when the feed omits them.
 """
 
 from __future__ import annotations
@@ -45,9 +21,10 @@ MARKET_FILE = ROOT / "data" / "market.json"
 ALLOWED_MARKET_FIELDS = {
     "kse100", "kse100Change", "allShare", "allShareChange", "ogti", "ogtiChange"
 }
-ALLOWED_STOCK_FIELDS = {
+NUMERIC_STOCK_FIELDS = {
     "price", "change", "avgVol", "pe", "lowestValue", "highestValue"
 }
+TEXT_STOCK_FIELDS = {"company", "sector", "listedIn"}
 
 
 def number(value, *, positive=False):
@@ -71,10 +48,7 @@ def normalize_number(n):
 
 
 def fetch_feed(url: str, token: str | None) -> dict:
-    headers = {
-        "Accept": "application/json",
-        "User-Agent": "psx-ai-market-intelligence/1.0",
-    }
+    headers = {"Accept": "application/json", "User-Agent": "psx-ai-market-intelligence/1.1"}
     if token:
         headers["Authorization"] = f"Bearer {token}"
     req = urllib.request.Request(url, headers=headers)
@@ -98,7 +72,34 @@ def parse_as_of(value) -> str:
     return str(value).strip()
 
 
-def merge(existing: dict, feed: dict) -> tuple[dict, int]:
+def new_stock(symbol: str, incoming: dict) -> dict:
+    """Create a safe dashboard record for a newly discovered PSX symbol."""
+    return {
+        "symbol": symbol,
+        "company": str(incoming.get("company") or incoming.get("name") or symbol).strip(),
+        "sector": str(incoming.get("sector") or "Unclassified").strip(),
+        "listedIn": str(incoming.get("listedIn") or "").strip(),
+        "price": None,
+        "change": None,
+        "pe": None,
+        "avgVol": None,
+        "lowestValue": None,
+        "highestValue": None,
+        "historicalSource": None,
+        "tactical": 0,
+        "entryQuality": 0,
+        "medium": 0,
+        "long": 0,
+        "conviction": 0,
+        "confidence": 0,
+        "state": "UNSCORED",
+        "risk": "DATA ONLY",
+        "paperSignal": False,
+        "liveEligible": False,
+    }
+
+
+def merge(existing: dict, feed: dict) -> tuple[dict, int, int]:
     if not isinstance(existing.get("stocks"), list):
         raise ValueError("data/market.json has no stocks array")
 
@@ -106,30 +107,40 @@ def merge(existing: dict, feed: dict) -> tuple[dict, int]:
     if not isinstance(feed_stocks, list):
         raise ValueError("feed stocks must be an array")
 
-    by_symbol = {str(s.get("symbol", "")).upper(): s for s in existing["stocks"]}
+    by_symbol = {str(s.get("symbol", "")).strip().upper(): s for s in existing["stocks"]}
     updated = 0
+    added = 0
 
     for incoming in feed_stocks:
         if not isinstance(incoming, dict):
             continue
         symbol = str(incoming.get("symbol", "")).strip().upper()
-        if not symbol or symbol not in by_symbol:
+        if not symbol:
             continue
-        target = by_symbol[symbol]
+
+        if symbol not in by_symbol:
+            target = new_stock(symbol, incoming)
+            existing["stocks"].append(target)
+            by_symbol[symbol] = target
+            added += 1
+        else:
+            target = by_symbol[symbol]
+
         before = json.dumps(target, sort_keys=True)
 
-        for field in ALLOWED_STOCK_FIELDS:
-            if field not in incoming:
-                continue
-            raw = incoming[field]
-            if raw is None:
-                continue  # preserve verified values already in the dashboard
-            target[field] = normalize_number(number(raw, positive=(field == "price")))
+        for field in TEXT_STOCK_FIELDS:
+            raw = incoming.get(field)
+            if raw is not None and str(raw).strip():
+                target[field] = str(raw).strip()
+        if incoming.get("name") and not incoming.get("company"):
+            target["company"] = str(incoming["name"]).strip()
 
-        # Integrity: historical extrema must bracket a positive price when all exist.
-        lo = target.get("lowestValue")
-        hi = target.get("highestValue")
-        px = target.get("price")
+        for field in NUMERIC_STOCK_FIELDS:
+            if field not in incoming or incoming[field] is None:
+                continue
+            target[field] = normalize_number(number(incoming[field], positive=(field == "price")))
+
+        lo, hi, px = target.get("lowestValue"), target.get("highestValue"), target.get("price")
         if lo is not None and hi is not None and float(lo) > float(hi):
             raise ValueError(f"{symbol}: lowestValue is greater than highestValue")
         if px is not None and float(px) <= 0:
@@ -137,6 +148,8 @@ def merge(existing: dict, feed: dict) -> tuple[dict, int]:
 
         if json.dumps(target, sort_keys=True) != before:
             updated += 1
+
+    existing["stocks"].sort(key=lambda s: str(s.get("symbol", "")))
 
     incoming_market = feed.get("market") or {}
     if not isinstance(incoming_market, dict):
@@ -157,28 +170,26 @@ def merge(existing: dict, feed: dict) -> tuple[dict, int]:
         "lastSuccessfulRefresh": as_of,
         "lastIngestedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "feedMode": "authorized",
+        "universeSize": len(existing["stocks"]),
     })
-    return existing, updated
+    return existing, updated, added
 
 
 def main() -> int:
     url = os.getenv("PSX_FEED_URL", "").strip()
     token = os.getenv("PSX_FEED_TOKEN", "").strip() or None
-
     if not url:
         print("PSX_FEED_URL is not configured; leaving the published snapshot unchanged.")
         return 0
 
     with MARKET_FILE.open("r", encoding="utf-8") as fh:
         existing = json.load(fh)
-
     feed = fetch_feed(url, token)
-    merged, count = merge(existing, feed)
+    merged, count, added = merge(existing, feed)
     with MARKET_FILE.open("w", encoding="utf-8") as fh:
         json.dump(merged, fh, indent=2, ensure_ascii=False)
         fh.write("\n")
-
-    print(f"Authorized feed merged successfully; {count} tracked stock records changed.")
+    print(f"Authorized feed merged successfully; {count} records changed, {added} new symbols added, {len(merged['stocks'])} total symbols.")
     return 0
 
 
