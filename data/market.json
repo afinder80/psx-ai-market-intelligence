@@ -1,11 +1,15 @@
 {
   "meta": {
-    "dataset": "Seed snapshot — 19 Aug 2026 approx 10:19 PKT",
+    "dataset": "Public demo snapshot — NOT CURRENT",
     "live": false,
     "modelVersion": "0.6",
-    "uiVersion": "1.1-historical-integrity",
+    "uiVersion": "1.2-private-snapshot",
     "lastSuccessfulRefresh": "2026-08-19T10:19:00+05:00",
     "authorizedFeedConnected": false,
+    "stockDataFresh": false,
+    "indexDataFresh": false,
+    "publicMarketDataMode": "demo-stale",
+    "snapshotWarning": "Public GitHub market values are stale and must not be used as current PSX data. Load a private local snapshot for current analysis.",
     "historicalRangeStatus": "Verified lifetime/all-available-history values only; unavailable values remain blank"
   },
   "market": {"kse100":178474,"kse100Change":0.29,"allShare":108207,"allShareChange":0.41,"ogti":36049,"ogtiChange":1.63},
