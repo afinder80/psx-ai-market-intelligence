@@ -1,0 +1,23 @@
+{
+  "asOf": "2026-08-24T10:30:00+05:00",
+  "provider": "PSX Licensed Feed",
+  "market": {
+    "kse100": 177000.0,
+    "kse100Change": 0.2,
+    "allShare": 107000.0,
+    "allShareChange": 0.1,
+    "ogti": 35000.0,
+    "ogtiChange": 0.5
+  },
+  "stocks": [
+    {
+      "symbol": "KEL",
+      "price": 7.25,
+      "change": 1.1,
+      "avgVol": 25000000,
+      "pe": 8.2,
+      "lowestValue": 1.23,
+      "highestValue": 15.4
+    }
+  ]
+}

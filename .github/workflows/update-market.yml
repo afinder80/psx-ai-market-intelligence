@@ -1,0 +1,50 @@
+name: Update Authorized PSX Market Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every 30 minutes on weekdays during the PSX trading-day window.
+    # UTC 04:00-11:00 ~= PKT 09:00-16:00.
+    - cron: "*/30 4-11 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: psx-market-update
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update market snapshot
+        env:
+          PSX_FEED_URL: ${{ secrets.PSX_FEED_URL }}
+          PSX_FEED_TOKEN: ${{ secrets.PSX_FEED_TOKEN }}
+        run: python scripts/update_market.py
+
+      - name: Validate JSON
+        run: python -m json.tool data/market.json > /dev/null
+
+      - name: Commit changed snapshot
+        run: |
+          if git diff --quiet -- data/market.json; then
+            echo "No market-data changes to publish."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/market.json
+          git commit -m "Update authorized PSX market snapshot"
+          git push origin main
