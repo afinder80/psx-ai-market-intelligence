@@ -22,8 +22,7 @@ async function load({manual=false}={}){
     });
     if(!response.ok) throw new Error(`Dataset request failed (${response.status})`);
 
-    const nextDb = await response.json();
-    db = nextDb;
+    db = await response.json();
     hydrate();
     render();
 
@@ -35,7 +34,7 @@ async function load({manual=false}={}){
     if(manual){
       $('dataset').textContent = changed
         ? `${db.meta.dataset} · New snapshot loaded · checked ${checkedAt}`
-        : `${db.meta.dataset} · ${isLive ? 'Feed checked' : 'Latest published snapshot reloaded'} · checked ${checkedAt}`;
+        : `${db.meta.dataset} · ${isLive ? 'Feed-backed snapshot checked' : 'Latest published snapshot reloaded'} · checked ${checkedAt}`;
     } else {
       $('dataset').textContent = db.meta.dataset;
     }
@@ -59,7 +58,9 @@ function hydrate(){
 
   $('sector').innerHTML='<option value="">All sectors</option>'+[...new Set(db.stocks.map(s=>s.sector))].sort().map(x=>`<option>${x}</option>`).join('');
   $('state').innerHTML='<option value="">All states</option>'+[...new Set(db.stocks.map(s=>s.state))].sort().map(x=>`<option>${x}</option>`).join('');
-  $('statusgrid').innerHTML=`<p>Model: <b>${db.meta.modelVersion}</b></p><p>UI: <b>${db.meta.uiVersion}</b></p><p>Authorized feed: <b>${db.meta.authorizedFeedConnected?'Connected':'Not connected'}</b></p><p>Last source refresh: <b>${db.meta.lastSuccessfulRefresh}</b></p><p>Historical range: <b>${db.meta.historicalRangeStatus||'Verified lifetime values where available'}</b></p><p>Refresh behavior: <b>${db.meta.authorizedFeedConnected?'Requests latest feed-backed dataset':'Reloads latest published GitHub snapshot'}</b></p>`;
+  const provider = db.meta.dataProvider || (db.meta.authorizedFeedConnected ? 'Authorized market-data feed' : 'Static published snapshot');
+  const ingested = db.meta.lastIngestedAt || '—';
+  $('statusgrid').innerHTML=`<p>Model: <b>${db.meta.modelVersion}</b></p><p>UI: <b>${db.meta.uiVersion}</b></p><p>Authorized feed: <b>${db.meta.authorizedFeedConnected?'Connected':'Not connected'}</b></p><p>Provider: <b>${provider}</b></p><p>Last source refresh: <b>${db.meta.lastSuccessfulRefresh}</b></p><p>Last ingest: <b>${ingested}</b></p><p>Historical range: <b>${db.meta.historicalRangeStatus||'Verified lifetime values where available'}</b></p><p>Refresh behavior: <b>${db.meta.authorizedFeedConnected?'Requests latest feed-backed published dataset':'Reloads latest published GitHub snapshot'}</b></p>`;
 }
 
 function rows(){
