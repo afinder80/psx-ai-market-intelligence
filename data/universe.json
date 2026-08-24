@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "source": "Pakistan Stock Exchange — Listed Companies / Companies Registrar",
+    "sourceUrl": "https://www.psx.com.pk/psx/resources-and-tools/listings/listed-companies-data",
+    "asOf": "2026-08-24",
+    "complete": false,
+    "note": "Bootstrap master. Expand from the official PSX Companies Registrar or an authorized reference-data feed; market prices are deliberately excluded from this file."
+  },
+  "stocks": [
+    {"symbol":"786","company":"786 Investments","sector":"Investment","status":"Listed"},
+    {"symbol":"AHCL","company":"Arif Habib Corporation","sector":"Investment","status":"Listed"},
+    {"symbol":"AKDSL","company":"AKD Securities","sector":"Investment","status":"Listed"},
+    {"symbol":"ASL","company":"Aisha Steel Mills","sector":"Engineering","status":"Listed"},
+    {"symbol":"BBFL","company":"Balochistan Bearings","sector":"Engineering","status":"Listed"},
+    {"symbol":"CNERGY","company":"Cnergyico PK","sector":"Refinery","status":"Listed"},
+    {"symbol":"FNEL","company":"First National Equities","sector":"Investment","status":"Listed"},
+    {"symbol":"FPJM","company":"First Punjab Modaraba","sector":"Modarabas","status":"Listed"},
+    {"symbol":"GCIL","company":"Ghani Chemical Industries","sector":"Chemicals","status":"Listed"},
+    {"symbol":"KEL","company":"K-Electric","sector":"Power","status":"Listed"},
+    {"symbol":"OGDC","company":"Oil & Gas Development Co.","sector":"Oil & Gas Exploration","status":"Listed"},
+    {"symbol":"UBL","company":"United Bank","sector":"Commercial Banks","status":"Listed"},
+    {"symbol":"UNITY","company":"Unity Foods","sector":"Food","status":"Listed"},
+    {"symbol":"WASL","company":"Waves Singer Pakistan","sector":"Engineering","status":"Listed"},
+    {"symbol":"WAVES","company":"Waves Corporation","sector":"Engineering","status":"Listed"},
+    {"symbol":"WAVESAPP","company":"Waves Home Appliances","sector":"Engineering","status":"Listed"}
+  ]
+}
