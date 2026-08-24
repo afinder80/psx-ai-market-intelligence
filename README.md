@@ -5,10 +5,25 @@ Independent PSX-first dashboard deployed on GitHub Pages.
 ## Data integrity
 
 - No Yahoo Finance fallback.
-- The public dashboard reads `data/market.json`.
+- `data/universe.json` is the reference master for listed symbols/company/sector metadata.
+- `data/market.json` contains market/model enrichment such as price, change, P/E, volume and scores.
+- The UI unions both files by symbol, so a listed company remains visible even when no current price/model data is available.
 - `Lowest Value` / `Highest Value` mean verified lifetime/all-available-history values where available; missing values remain blank.
 - Public PSX website scraping is intentionally not used for automated redistribution.
 - Live/delayed PSX market data must be supplied through an authorized/licensed feed before commercial redistribution.
+
+## Universe master
+
+The repository includes `scripts/update_universe.py` and `.github/workflows/update-universe.yml`.
+
+The universe updater accepts JSON or CSV reference data and writes `data/universe.json`. It deliberately ignores market prices. Configure:
+
+- `PSX_UNIVERSE_URL` — authorized/reference-data endpoint or user-controlled export based on the official PSX Companies Registrar.
+- `PSX_UNIVERSE_TOKEN` — optional bearer token.
+
+If the URL is not configured, the current universe file is left unchanged. The workflow checks once per weekday and can also be run manually.
+
+The initial `data/universe.json` is a bootstrap master and is marked `complete: false` until the full official registrar/reference dataset is imported.
 
 ## Automated market update engine
 

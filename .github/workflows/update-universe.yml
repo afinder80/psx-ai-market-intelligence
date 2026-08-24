@@ -1,0 +1,49 @@
+name: Update PSX Reference Universe
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily reference-data check at 01:30 UTC / 06:30 PKT on weekdays.
+    - cron: "30 1 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: psx-universe-update
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update universe master
+        env:
+          PSX_UNIVERSE_URL: ${{ secrets.PSX_UNIVERSE_URL }}
+          PSX_UNIVERSE_TOKEN: ${{ secrets.PSX_UNIVERSE_TOKEN }}
+        run: python scripts/update_universe.py
+
+      - name: Validate JSON
+        run: python -m json.tool data/universe.json > /dev/null
+
+      - name: Commit changed universe
+        run: |
+          if git diff --quiet -- data/universe.json; then
+            echo "No universe changes to publish."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/universe.json
+          git commit -m "Update PSX reference universe"
+          git push origin main

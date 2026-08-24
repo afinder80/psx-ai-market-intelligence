@@ -1,4 +1,5 @@
 let db;
+let universeMeta={};
 const $ = id => document.getElementById(id);
 const f = n => n == null ? '—' : Number(n).toLocaleString(undefined,{maximumFractionDigits:2});
 const pct = n => n == null ? '—' : `${Number(n)>=0?'+':''}${f(n)}%`;
@@ -10,21 +11,59 @@ const histPos = s => {
   return lo == null || hi == null || hi <= lo || s.price == null ? null : Math.max(0,Math.min(100,(s.price-lo)/(hi-lo)*100));
 };
 
+function mergeUniverse(master, market){
+  const marketStocks = Array.isArray(market.stocks) ? market.stocks : [];
+  const masterStocks = Array.isArray(master?.stocks) ? master.stocks : [];
+  const byMarket = new Map(marketStocks.map(s=>[String(s.symbol||'').toUpperCase(),s]));
+  const merged=[];
+  const seen=new Set();
+
+  for(const base of masterStocks){
+    const symbol=String(base.symbol||'').trim().toUpperCase();
+    if(!symbol) continue;
+    const live=byMarket.get(symbol)||{};
+    merged.push({
+      state:'UNSCORED',
+      risk:'DATA ONLY',
+      ...base,
+      ...live,
+      symbol,
+      company:base.company||live.company||symbol,
+      sector:base.sector||live.sector||'Unclassified'
+    });
+    seen.add(symbol);
+  }
+
+  // Never hide a valid market symbol merely because the reference master is stale.
+  for(const live of marketStocks){
+    const symbol=String(live.symbol||'').trim().toUpperCase();
+    if(!symbol||seen.has(symbol)) continue;
+    merged.push({state:'UNSCORED',risk:'DATA ONLY',...live,symbol,company:live.company||symbol,sector:live.sector||'Unclassified'});
+  }
+
+  return {...market,stocks:merged};
+}
+
 async function load({manual=false}={}){
   const b = $('refresh');
   const previousSourceRefresh = db?.meta?.lastSuccessfulRefresh ?? null;
   b.disabled = true;
   b.textContent = manual ? 'Refreshing…' : 'Loading…';
-  $('dataset').textContent = manual ? 'Checking for the latest published dataset…' : 'Loading market dataset…';
+  $('dataset').textContent = manual ? 'Checking for the latest published dataset…' : 'Loading PSX universe and market dataset…';
 
   try {
-    const response = await fetch(`data/market.json?ts=${Date.now()}`,{
-      cache:'no-store',
-      headers:{'Cache-Control':'no-cache'}
-    });
-    if(!response.ok) throw new Error(`Dataset request failed (${response.status})`);
+    const ts=Date.now();
+    const [marketResponse, universeResponse] = await Promise.all([
+      fetch(`data/market.json?ts=${ts}`,{cache:'no-store',headers:{'Cache-Control':'no-cache'}}),
+      fetch(`data/universe.json?ts=${ts}`,{cache:'no-store',headers:{'Cache-Control':'no-cache'}})
+    ]);
+    if(!marketResponse.ok) throw new Error(`Market dataset request failed (${marketResponse.status})`);
+    if(!universeResponse.ok) throw new Error(`Universe dataset request failed (${universeResponse.status})`);
 
-    db = await response.json();
+    const market=await marketResponse.json();
+    const universe=await universeResponse.json();
+    universeMeta=universe.meta||{};
+    db=mergeUniverse(universe,market);
     hydrate();
     render();
 
@@ -62,8 +101,10 @@ function hydrate(){
   $('state').innerHTML='<option value="">All states</option>'+[...new Set(db.stocks.map(s=>s.state||'UNSCORED'))].sort().map(x=>`<option>${x}</option>`).join('');
   const provider = db.meta.dataProvider || (db.meta.authorizedFeedConnected ? 'Authorized market-data feed' : 'Static published snapshot');
   const ingested = db.meta.lastIngestedAt || '—';
-  const universeSize = db.meta.universeSize || db.stocks.length;
-  $('statusgrid').innerHTML=`<p>Model: <b>${db.meta.modelVersion}</b></p><p>UI: <b>${db.meta.uiVersion}</b></p><p>Authorized feed: <b>${db.meta.authorizedFeedConnected?'Connected':'Not connected'}</b></p><p>Provider: <b>${provider}</b></p><p>Universe size: <b>${universeSize}</b></p><p>Last source refresh: <b>${db.meta.lastSuccessfulRefresh}</b></p><p>Last ingest: <b>${ingested}</b></p><p>Historical range: <b>${db.meta.historicalRangeStatus||'Verified lifetime values where available'}</b></p><p>Refresh behavior: <b>${db.meta.authorizedFeedConnected?'Requests latest feed-backed published dataset':'Reloads latest published GitHub snapshot'}</b></p>`;
+  const universeSource=universeMeta.source||'Reference master';
+  const universeAsOf=universeMeta.asOf||'—';
+  const universeStatus=universeMeta.complete===true?'Complete':'Bootstrap / awaiting full registrar import';
+  $('statusgrid').innerHTML=`<p>Model: <b>${db.meta.modelVersion}</b></p><p>UI: <b>${db.meta.uiVersion}</b></p><p>Authorized feed: <b>${db.meta.authorizedFeedConnected?'Connected':'Not connected'}</b></p><p>Provider: <b>${provider}</b></p><p>Universe size: <b>${db.stocks.length}</b></p><p>Universe source: <b>${universeSource}</b></p><p>Universe as of: <b>${universeAsOf}</b></p><p>Universe status: <b>${universeStatus}</b></p><p>Last source refresh: <b>${db.meta.lastSuccessfulRefresh}</b></p><p>Last ingest: <b>${ingested}</b></p><p>Historical range: <b>${db.meta.historicalRangeStatus||'Verified lifetime values where available'}</b></p><p>Refresh behavior: <b>${db.meta.authorizedFeedConnected?'Requests latest feed-backed published dataset':'Reloads latest published GitHub snapshot'}</b></p>`;
 }
 
 function rows(){
