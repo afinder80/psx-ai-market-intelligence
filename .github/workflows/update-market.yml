@@ -30,6 +30,11 @@ jobs:
 
       - name: Update market snapshot
         env:
+          # Preferred production provider. Until the token is configured, the
+          # updater exits safely without changing the public market snapshot.
+          PSX_PROVIDER: capitalstake
+          CAPITALSTAKE_API_TOKEN: ${{ secrets.CAPITALSTAKE_API_TOKEN }}
+          # Generic authorized-feed fallback retained for future provider changes.
           PSX_FEED_URL: ${{ secrets.PSX_FEED_URL }}
           PSX_FEED_TOKEN: ${{ secrets.PSX_FEED_TOKEN }}
         run: python scripts/update_market.py
@@ -40,7 +45,7 @@ jobs:
       - name: Commit changed snapshot
         run: |
           if git diff --quiet -- data/market.json; then
-            echo "No market-data changes to publish."
+            echo "No authorized market-data changes to publish."
             exit 0
           fi
           git config user.name "github-actions[bot]"
