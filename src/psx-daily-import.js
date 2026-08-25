@@ -1,120 +1,43 @@
 const LOCAL_KEY='psxPrivateSnapshotV1';
-
 const num=v=>{if(v==null||v==='')return null;const x=Number(String(v).replace(/[%,$\s]/g,'').replace(/,/g,''));return Number.isFinite(x)?x:null;};
-
-function splitDelimited(text,delimiter){
-  const rows=[];let row=[],cell='',quoted=false;
-  for(let i=0;i<text.length;i++){
-    const c=text[i],n=text[i+1];
-    if(c==='"'){
-      if(quoted&&n==='"'){cell+='"';i++;}else quoted=!quoted;
-    }else if(c===delimiter&&!quoted){row.push(cell.trim());cell='';}
-    else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&n==='\n')i++;row.push(cell.trim());if(row.some(x=>x!==''))rows.push(row);row=[];cell='';}
-    else cell+=c;
-  }
-  row.push(cell.trim());if(row.some(x=>x!==''))rows.push(row);return rows;
-}
-
-function detectDelimiter(text){
-  const line=String(text).split(/\r?\n/).find(x=>x.trim())||'';
-  const tabs=(line.match(/\t/g)||[]).length, commas=(line.match(/,/g)||[]).length;
-  return tabs>commas?'\t':',';
-}
-
 const norm=s=>String(s||'').trim().toUpperCase().replace(/\s+/g,' ');
 const compact=s=>norm(s).replace(/[^A-Z0-9%]/g,'');
 
-function findHeaderIndex(rawHeaders,tests){
-  for(let i=0;i<rawHeaders.length;i++){
-    const raw=norm(rawHeaders[i]), key=compact(rawHeaders[i]);
-    if(tests.some(t=>t(raw,key))) return i;
-  }
-  return -1;
-}
+function splitDelimited(text,delimiter){const rows=[];let row=[],cell='',quoted=false;for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];if(c==='"'){if(quoted&&n==='"'){cell+='"';i++;}else quoted=!quoted;}else if(c===delimiter&&!quoted){row.push(cell.trim());cell='';}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&n==='\n')i++;row.push(cell.trim());if(row.some(x=>x!==''))rows.push(row);row=[];cell='';}else cell+=c;}row.push(cell.trim());if(row.some(x=>x!==''))rows.push(row);return rows;}
+function detectDelimiter(text){const line=String(text).split(/\r?\n/).find(x=>x.trim())||'';if((line.match(/\|/g)||[]).length>=8)return '|';const tabs=(line.match(/\t/g)||[]).length,commas=(line.match(/,/g)||[]).length;return tabs>commas?'\t':',';}
+function findHeaderIndex(rawHeaders,tests){for(let i=0;i<rawHeaders.length;i++){const raw=norm(rawHeaders[i]),key=compact(rawHeaders[i]);if(tests.some(t=>t(raw,key)))return i;}return -1;}
+function inferAsOf(fileName){const n=String(fileName||'');let m=n.match(/(20\d{2})[-_](\d{1,2})[-_](\d{1,2})/);if(m)return `${m[1]}-${m[2].padStart(2,'0')}-${m[3].padStart(2,'0')}T15:50:00+05:00`;m=n.match(/(\d{1,2})[-_](\d{1,2})[-_](20\d{2})/);if(m)return `${m[3]}-${m[2].padStart(2,'0')}-${m[1].padStart(2,'0')}T15:50:00+05:00`;return new Date().toISOString();}
+function psxLisDate(v){const m=String(v||'').trim().toUpperCase().match(/^(\d{1,2})(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)(20\d{2})$/);if(!m)return null;const mm={JAN:'01',FEB:'02',MAR:'03',APR:'04',MAY:'05',JUN:'06',JUL:'07',AUG:'08',SEP:'09',OCT:'10',NOV:'11',DEC:'12'}[m[2]];return `${m[3]}-${mm}-${m[1].padStart(2,'0')}`;}
 
-function inferAsOf(fileName){
-  const n=String(fileName||'');
-  let m=n.match(/(20\d{2})[-_](\d{1,2})[-_](\d{1,2})/);
-  if(m)return `${m[1]}-${m[2].padStart(2,'0')}-${m[3].padStart(2,'0')}T15:50:00+05:00`;
-  m=n.match(/(\d{1,2})[-_](\d{1,2})[-_](20\d{2})/);
-  if(m)return `${m[3]}-${m[2].padStart(2,'0')}-${m[1].padStart(2,'0')}T15:50:00+05:00`;
-  return new Date().toISOString();
+function parsePsxClosingLis(text,fileName){
+  const lines=String(text).split(/\r?\n/).filter(x=>x.trim());const stocks=[];let tradeDate=null;
+  for(const line of lines){const p=line.split('|');if(p.length<10)continue;const d=psxLisDate(p[0]);if(!d)continue;if(!tradeDate)tradeDate=d;const symbol=String(p[1]||'').trim().toUpperCase();const marketCode=String(p[2]||'').trim();if(!symbol||['40','41','36'].includes(marketCode))continue;
+    const open=num(p[4]),high=num(p[5]),low=num(p[6]),price=num(p[7]),volume=num(p[8]),previousClose=num(p[9]);if(price==null)continue;const change=previousClose?((price-previousClose)/previousClose)*100:null;
+    stocks.push({symbol,company:String(p[3]||'').trim(),marketCode,open,high,low,dayHigh:high,dayLow:low,price,volume,previousClose,ldcp:previousClose,change:change==null?null:Number(change.toFixed(6)),state:'UNSCORED',risk:'PRIVATE DATA'});
+  }
+  if(!stocks.length)throw new Error('No valid PSX closing rows were found in the .LIS file');const date=tradeDate||inferAsOf(fileName).slice(0,10);
+  return {meta:{asOf:`${date}T15:50:00+05:00`,latestTradingSession:date,source:`Pakistan Stock Exchange — Market Summary (Closing): ${fileName}`,format:'PSX Closing LIS',stockRows:stocks.length},stocks};
 }
 
 function parsePsxDaily(text,fileName){
-  const rows=splitDelimited(text,detectDelimiter(text));
-  if(!rows.length)throw new Error('File is empty');
-
-  let hi=-1,rawHeaders=[];
-  for(let i=0;i<Math.min(rows.length,25);i++){
-    const keys=rows[i].map(compact);
-    if(keys.includes('SYMBOL')&&(keys.includes('CURRENT')||keys.includes('CLOSE')||keys.includes('PRICE'))){hi=i;rawHeaders=rows[i];break;}
-  }
+  const delimiter=detectDelimiter(text);if(delimiter==='|'&&psxLisDate(String(text).split(/\r?\n/).find(x=>x.trim())?.split('|')[0]))return parsePsxClosingLis(text,fileName);
+  const rows=splitDelimited(text,delimiter);if(!rows.length)throw new Error('File is empty');let hi=-1,rawHeaders=[];
+  for(let i=0;i<Math.min(rows.length,25);i++){const keys=rows[i].map(compact);if(keys.includes('SYMBOL')&&(keys.includes('CURRENT')||keys.includes('CLOSE')||keys.includes('PRICE'))){hi=i;rawHeaders=rows[i];break;}}
   if(hi<0)throw new Error('Could not find PSX market headers (SYMBOL / CURRENT)');
-
-  const si=findHeaderIndex(rawHeaders,[(r,k)=>k==='SYMBOL',(r,k)=>['SCRIP','TICKER','CODE'].includes(k)]);
-  const ldcpI=findHeaderIndex(rawHeaders,[(r,k)=>k==='LDCP']);
-  const openI=findHeaderIndex(rawHeaders,[(r,k)=>k==='OPEN']);
-  const highI=findHeaderIndex(rawHeaders,[(r,k)=>k==='HIGH']);
-  const lowI=findHeaderIndex(rawHeaders,[(r,k)=>k==='LOW']);
-  const priceI=findHeaderIndex(rawHeaders,[(r,k)=>k==='CURRENT',(r,k)=>['CLOSE','CLOSINGPRICE','PRICE','LAST','RATE'].includes(k)]);
-  const pctI=findHeaderIndex(rawHeaders,[(r,k)=>r.includes('%')&&r.includes('CHANGE'),(r,k)=>['CHANGEPERCENT','PERCENTCHANGE','PCTCHANGE','CHANGE%'].includes(k)]);
-  const absChangeI=findHeaderIndex(rawHeaders,[(r,k)=>k==='CHANGE'&&!r.includes('%')]);
-  const volI=findHeaderIndex(rawHeaders,[(r,k)=>['VOLUME','VOL','SHARES','TURNOVER'].includes(k)]);
-  const peI=findHeaderIndex(rawHeaders,[(r,k)=>['PE','PERATIO','TTMPE'].includes(k)]);
-
-  const stocks=[];
-  for(const r of rows.slice(hi+1)){
-    const symbol=String(r[si]||'').trim().toUpperCase();if(!symbol)continue;
-    const s={symbol,state:'UNSCORED',risk:'PRIVATE DATA'};
-    const price=priceI>=0?num(r[priceI]):null;if(price!=null)s.price=price;
-    const pct=pctI>=0?num(r[pctI]):null;if(pct!=null)s.change=pct;
-    const abs=absChangeI>=0?num(r[absChangeI]):null;if(abs!=null)s.pointChange=abs;
-    const ldcp=ldcpI>=0?num(r[ldcpI]):null;if(ldcp!=null)s.ldcp=ldcp;
-    const open=openI>=0?num(r[openI]):null;if(open!=null)s.open=open;
-    const high=highI>=0?num(r[highI]):null;if(high!=null)s.dayHigh=high;
-    const low=lowI>=0?num(r[lowI]):null;if(low!=null)s.dayLow=low;
-    const vol=volI>=0?num(r[volI]):null;if(vol!=null){s.volume=vol;s.avgVol=s.avgVol??null;}
-    const pe=peI>=0?num(r[peI]):null;if(pe!=null)s.pe=pe;
-    stocks.push(s);
-  }
-  if(!stocks.length)throw new Error('No valid PSX stock rows were found');
-  return {meta:{asOf:inferAsOf(fileName),source:`Private PSX daily file: ${fileName}`,format:'PSX Daily Market Summary'},stocks};
+  const si=findHeaderIndex(rawHeaders,[(r,k)=>k==='SYMBOL',(r,k)=>['SCRIP','TICKER','CODE'].includes(k)]),ci=findHeaderIndex(rawHeaders,[(r,k)=>['COMPANY','COMPANYNAME','NAME'].includes(k)]),ldcpI=findHeaderIndex(rawHeaders,[(r,k)=>k==='LDCP']),openI=findHeaderIndex(rawHeaders,[(r,k)=>k==='OPEN']),highI=findHeaderIndex(rawHeaders,[(r,k)=>k==='HIGH']),lowI=findHeaderIndex(rawHeaders,[(r,k)=>k==='LOW']),priceI=findHeaderIndex(rawHeaders,[(r,k)=>k==='CURRENT',(r,k)=>['CLOSE','CLOSINGPRICE','PRICE','LAST','RATE'].includes(k)]),pctI=findHeaderIndex(rawHeaders,[(r,k)=>r.includes('%')&&r.includes('CHANGE'),(r,k)=>['CHANGEPERCENT','PERCENTCHANGE','PCTCHANGE','CHANGE%'].includes(k)]),absChangeI=findHeaderIndex(rawHeaders,[(r,k)=>k==='CHANGE'&&!r.includes('%')]),volI=findHeaderIndex(rawHeaders,[(r,k)=>['VOLUME','VOL','SHARES','TURNOVER'].includes(k)]),peI=findHeaderIndex(rawHeaders,[(r,k)=>['PE','PERATIO','TTMPE'].includes(k)]);
+  const stocks=[];for(const r of rows.slice(hi+1)){const symbol=String(r[si]||'').trim().toUpperCase();if(!symbol)continue;const s={symbol,state:'UNSCORED',risk:'PRIVATE DATA'};if(ci>=0&&r[ci])s.company=r[ci];const price=priceI>=0?num(r[priceI]):null;if(price!=null)s.price=price;const pct=pctI>=0?num(r[pctI]):null;if(pct!=null)s.change=pct;const abs=absChangeI>=0?num(r[absChangeI]):null;if(abs!=null)s.pointChange=abs;const ldcp=ldcpI>=0?num(r[ldcpI]):null;if(ldcp!=null){s.ldcp=ldcp;s.previousClose=ldcp;}const open=openI>=0?num(r[openI]):null;if(open!=null)s.open=open;const high=highI>=0?num(r[highI]):null;if(high!=null){s.high=high;s.dayHigh=high;}const low=lowI>=0?num(r[lowI]):null;if(low!=null){s.low=low;s.dayLow=low;}const vol=volI>=0?num(r[volI]):null;if(vol!=null)s.volume=vol;const pe=peI>=0?num(r[peI]):null;if(pe!=null)s.pe=pe;stocks.push(s);}if(!stocks.length)throw new Error('No valid PSX stock rows were found');return {meta:{asOf:inferAsOf(fileName),source:`Private PSX daily file: ${fileName}`,format:'PSX Daily Market Summary'},stocks};
 }
 
-function parseJson(text,fileName){
-  const obj=JSON.parse(text);
-  if(Array.isArray(obj))return {meta:{asOf:new Date().toISOString(),source:`Private JSON: ${fileName}`},stocks:obj};
-  if(!obj||typeof obj!=='object')throw new Error('JSON must be an object or array');
-  return obj;
+function parseJson(text,fileName){const obj=JSON.parse(text);if(Array.isArray(obj))return {meta:{asOf:new Date().toISOString(),source:`Private JSON: ${fileName}`},stocks:obj};if(!obj||typeof obj!=='object')throw new Error('JSON must be an object or array');return obj;}
+function dateOf(s){const m=String(s||'').match(/(20\d{2}-\d{2}-\d{2})/);return m?.[1]||null;}
+function mergeWithExisting(snapshot,fileName){let existing=null;try{const raw=localStorage.getItem(LOCAL_KEY);existing=raw?JSON.parse(raw):null;}catch{}const prior=existing?.snapshot||{};const sameDate=dateOf(prior.meta?.asOf)===dateOf(snapshot.meta?.asOf);const merged={...prior,...snapshot,meta:{...(prior.meta||{}),...(snapshot.meta||{})},market:snapshot.market??(sameDate?prior.market:undefined),stocks:Array.isArray(snapshot.stocks)&&snapshot.stocks.length?snapshot.stocks:(prior.stocks||[])};return {name:fileName,importedAt:new Date().toISOString(),snapshot:merged};}
+
+function findEocd(view){for(let i=view.byteLength-22;i>=Math.max(0,view.byteLength-65557);i--){if(view.getUint32(i,true)===0x06054b50)return i;}throw new Error('ZIP end record not found');}
+async function unzipFirstFile(file){
+  const buf=await file.arrayBuffer();const view=new DataView(buf);const eocd=findEocd(view);const cdOffset=view.getUint32(eocd+16,true);if(view.getUint32(cdOffset,true)!==0x02014b50)throw new Error('ZIP central directory is invalid');const method=view.getUint16(cdOffset+10,true),compSize=view.getUint32(cdOffset+20,true),nameLen=view.getUint16(cdOffset+28,true),localOffset=view.getUint32(cdOffset+42,true);const nameBytes=new Uint8Array(buf,cdOffset+46,nameLen);const name=new TextDecoder().decode(nameBytes);if(view.getUint32(localOffset,true)!==0x04034b50)throw new Error('ZIP local header is invalid');const localNameLen=view.getUint16(localOffset+26,true),localExtraLen=view.getUint16(localOffset+28,true),dataStart=localOffset+30+localNameLen+localExtraLen;const compressed=new Uint8Array(buf,dataStart,compSize);let bytes;if(method===0)bytes=compressed;else if(method===8){if(!('DecompressionStream'in window))throw new Error('Your browser cannot decompress this PSX ZIP directly');const ds=new DecompressionStream('deflate-raw');const ab=await new Response(new Blob([compressed]).stream().pipeThrough(ds)).arrayBuffer();bytes=new Uint8Array(ab);}else throw new Error(`Unsupported ZIP compression method ${method}`);return {name,text:new TextDecoder('windows-1252').decode(bytes)};
 }
 
-function mergeWithExisting(snapshot,fileName){
-  let existing=null;try{const raw=localStorage.getItem(LOCAL_KEY);existing=raw?JSON.parse(raw):null;}catch{}
-  const prior=existing?.snapshot||{};
-  const merged={
-    ...prior,
-    ...snapshot,
-    meta:{...(prior.meta||{}),...(snapshot.meta||{})},
-    market:snapshot.market??prior.market,
-    stocks:Array.isArray(snapshot.stocks)&&snapshot.stocks.length?snapshot.stocks:(prior.stocks||[])
-  };
-  return {name:fileName,importedAt:new Date().toISOString(),snapshot:merged};
-}
+async function readSnapshot(file){const lower=file.name.toLowerCase();if(lower.endsWith('.json'))return parseJson(await file.text(),file.name);if(lower.endsWith('.z')||lower.endsWith('.zip')){const inner=await unzipFirstFile(file);return parsePsxDaily(inner.text,inner.name);}return parsePsxDaily(await file.text(),file.name);}
 
-function attach(){
-  const input=document.getElementById('localFile');if(!input)return;
-  input.addEventListener('change',async e=>{
-    const file=e.target.files?.[0];if(!file)return;
-    e.stopImmediatePropagation();
-    try{
-      const text=await file.text();
-      const isJson=file.name.toLowerCase().endsWith('.json');
-      const snapshot=isJson?parseJson(text,file.name):parsePsxDaily(text,file.name);
-      localStorage.setItem(LOCAL_KEY,JSON.stringify(mergeWithExisting(snapshot,file.name)));
-      location.reload();
-    }catch(err){alert(`Could not load PSX file: ${err.message}`);e.target.value='';}
-  },true);
-}
-
+function attach(){const input=document.getElementById('localFile');if(!input)return;input.addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;e.stopImmediatePropagation();try{const snapshot=await readSnapshot(file);localStorage.setItem(LOCAL_KEY,JSON.stringify(mergeWithExisting(snapshot,file.name)));location.reload();}catch(err){alert(`Could not load PSX file: ${err.message}`);e.target.value='';}},true);}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',attach,{once:true});else attach();
