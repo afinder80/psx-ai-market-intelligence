@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Merge an authorized PSX market-data feed into data/market.json.
 
-The updater supports the full PSX universe. New symbols from the authorized feed
-are appended automatically instead of being discarded. Existing research/model
-fields and verified historical extrema are preserved when the feed omits them.
+Supported modes:
+- Capital Stake authorized PSX API (PSX_PROVIDER=capitalstake)
+- Generic normalized JSON feed (PSX_FEED_URL)
+
+The updater is read-only with respect to the market. It never places orders.
 """
 
 from __future__ import annotations
@@ -22,7 +24,9 @@ ALLOWED_MARKET_FIELDS = {
     "kse100", "kse100Change", "allShare", "allShareChange", "ogti", "ogtiChange"
 }
 NUMERIC_STOCK_FIELDS = {
-    "price", "change", "avgVol", "pe", "lowestValue", "highestValue"
+    "price", "change", "avgVol", "pe", "lowestValue", "highestValue",
+    "volume", "open", "dayHigh", "dayLow", "previousClose",
+    "upperCircuit", "lowerCircuit", "marketCap", "freeFloat", "high52", "low52",
 }
 TEXT_STOCK_FIELDS = {"company", "sector", "listedIn"}
 
@@ -48,7 +52,7 @@ def normalize_number(n):
 
 
 def fetch_feed(url: str, token: str | None) -> dict:
-    headers = {"Accept": "application/json", "User-Agent": "psx-ai-market-intelligence/1.1"}
+    headers = {"Accept": "application/json", "User-Agent": "psx-ai-market-intelligence/1.2"}
     if token:
         headers["Authorization"] = f"Bearer {token}"
     req = urllib.request.Request(url, headers=headers)
@@ -59,6 +63,24 @@ def fetch_feed(url: str, token: str | None) -> dict:
     if not isinstance(payload, dict):
         raise ValueError("feed payload must be a JSON object")
     return payload
+
+
+def provider_feed() -> dict | None:
+    provider = os.getenv("PSX_PROVIDER", "").strip().lower()
+    if provider == "capitalstake":
+        token = os.getenv("CAPITALSTAKE_API_TOKEN", "").strip()
+        if not token:
+            print("CAPITALSTAKE_API_TOKEN is not configured; leaving snapshot unchanged.")
+            return None
+        from capitalstake_adapter import build_feed
+        return build_feed(token)
+
+    url = os.getenv("PSX_FEED_URL", "").strip()
+    token = os.getenv("PSX_FEED_TOKEN", "").strip() or None
+    if not url:
+        print("No authorized feed is configured; leaving the published snapshot unchanged.")
+        return None
+    return fetch_feed(url, token)
 
 
 def parse_as_of(value) -> str:
@@ -73,7 +95,6 @@ def parse_as_of(value) -> str:
 
 
 def new_stock(symbol: str, incoming: dict) -> dict:
-    """Create a safe dashboard record for a newly discovered PSX symbol."""
     return {
         "symbol": symbol,
         "company": str(incoming.get("company") or incoming.get("name") or symbol).strip(),
@@ -166,6 +187,8 @@ def merge(existing: dict, feed: dict) -> tuple[dict, int, int]:
         "dataset": f"Authorized market snapshot — {as_of}",
         "live": True,
         "authorizedFeedConnected": True,
+        "stockDataFresh": True,
+        "indexDataFresh": bool(incoming_market),
         "dataProvider": provider,
         "lastSuccessfulRefresh": as_of,
         "lastIngestedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -176,20 +199,20 @@ def merge(existing: dict, feed: dict) -> tuple[dict, int, int]:
 
 
 def main() -> int:
-    url = os.getenv("PSX_FEED_URL", "").strip()
-    token = os.getenv("PSX_FEED_TOKEN", "").strip() or None
-    if not url:
-        print("PSX_FEED_URL is not configured; leaving the published snapshot unchanged.")
+    feed = provider_feed()
+    if feed is None:
         return 0
 
     with MARKET_FILE.open("r", encoding="utf-8") as fh:
         existing = json.load(fh)
-    feed = fetch_feed(url, token)
     merged, count, added = merge(existing, feed)
     with MARKET_FILE.open("w", encoding="utf-8") as fh:
         json.dump(merged, fh, indent=2, ensure_ascii=False)
         fh.write("\n")
-    print(f"Authorized feed merged successfully; {count} records changed, {added} new symbols added, {len(merged['stocks'])} total symbols.")
+    print(
+        f"Authorized feed merged successfully; {count} records changed, "
+        f"{added} new symbols added, {len(merged['stocks'])} total symbols."
+    )
     return 0
 
 
