@@ -2,9 +2,9 @@
   "meta": {
     "source": "Pakistan Stock Exchange — official symbols reference endpoint",
     "sourceUrl": "https://dps.psx.com.pk/symbols",
-    "asOf": "2026-08-28",
+    "asOf": "2026-08-31",
     "complete": true,
-    "universeSize": 762,
+    "universeSize": 763,
     "excludedDebtInstruments": 250,
     "note": "Reference metadata only. Debt instruments are excluded from the main shares universe; market prices are stored separately in data/market.json."
   },
@@ -2810,7 +2810,7 @@
     },
     {
       "symbol": "HBLTETF",
-      "company": "HBL Total Treasury (ETF)",
+      "company": "HBL Total Treasury ETF",
       "sector": "EXCHANGE TRADED FUNDS",
       "status": "Listed",
       "instrumentType": "ETF",
@@ -6753,6 +6753,15 @@
     {
       "symbol": "WAVESAPP",
       "company": "Waves Home Appliances Limited",
+      "sector": "CABLE & ELECTRICAL GOODS",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "WAVESAPPR",
+      "company": "Waves Home Appliances Limited(Right)",
       "sector": "CABLE & ELECTRICAL GOODS",
       "status": "Listed",
       "instrumentType": "Equity",
