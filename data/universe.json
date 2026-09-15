@@ -2,10 +2,10 @@
   "meta": {
     "source": "Pakistan Stock Exchange — official symbols reference endpoint",
     "sourceUrl": "https://dps.psx.com.pk/symbols",
-    "asOf": "2026-09-14",
+    "asOf": "2026-09-15",
     "complete": true,
-    "universeSize": 763,
-    "excludedDebtInstruments": 257,
+    "universeSize": 764,
+    "excludedDebtInstruments": 258,
     "note": "Reference metadata only. Debt instruments are excluded from the main shares universe; market prices are stored separately in data/market.json."
   },
   "stocks": [
@@ -5971,6 +5971,15 @@
       "symbol": "SNGP",
       "company": "Sui Northern Gas Pipelines Limited",
       "sector": "OIL & GAS MARKETING COMPANIES",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "SOYASUP",
+      "company": "Agro Processors & Atmospheric Gases Ltd",
+      "sector": "FOOD & PERSONAL CARE PRODUCTS",
       "status": "Listed",
       "instrumentType": "Equity",
       "isETF": false,
