@@ -2,7 +2,7 @@
   "meta": {
     "source": "Pakistan Stock Exchange — official symbols reference endpoint",
     "sourceUrl": "https://dps.psx.com.pk/symbols",
-    "asOf": "2026-09-15",
+    "asOf": "2026-09-16",
     "complete": true,
     "universeSize": 764,
     "excludedDebtInstruments": 258,
