@@ -2,9 +2,9 @@
   "meta": {
     "source": "Pakistan Stock Exchange — official symbols reference endpoint",
     "sourceUrl": "https://dps.psx.com.pk/symbols",
-    "asOf": "2026-09-16",
+    "asOf": "2026-09-17",
     "complete": true,
-    "universeSize": 764,
+    "universeSize": 765,
     "excludedDebtInstruments": 258,
     "note": "Reference metadata only. Debt instruments are excluded from the main shares universe; market prices are stored separately in data/market.json."
   },
@@ -4477,6 +4477,15 @@
       "symbol": "NML",
       "company": "Nishat Mills Limited",
       "sector": "TEXTILE COMPOSITE",
+      "status": "Listed",
+      "instrumentType": "Equity",
+      "isETF": false,
+      "isDebt": false
+    },
+    {
+      "symbol": "NNAR",
+      "company": "Naya Nazimabad Apartments Reit",
+      "sector": "REAL ESTATE INVESTMENT TRUST",
       "status": "Listed",
       "instrumentType": "Equity",
       "isETF": false,
