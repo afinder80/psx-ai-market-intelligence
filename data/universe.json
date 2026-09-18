@@ -2,10 +2,10 @@
   "meta": {
     "source": "Pakistan Stock Exchange — official symbols reference endpoint",
     "sourceUrl": "https://dps.psx.com.pk/symbols",
-    "asOf": "2026-09-17",
+    "asOf": "2026-09-18",
     "complete": true,
     "universeSize": 765,
-    "excludedDebtInstruments": 258,
+    "excludedDebtInstruments": 260,
     "note": "Reference metadata only. Debt instruments are excluded from the main shares universe; market prices are stored separately in data/market.json."
   },
   "stocks": [
@@ -3314,7 +3314,7 @@
     },
     {
       "symbol": "IREIT",
-      "company": "Image Reit",
+      "company": "Image REIT",
       "sector": "REAL ESTATE INVESTMENT TRUST",
       "status": "Listed",
       "instrumentType": "Equity",
@@ -4484,7 +4484,7 @@
     },
     {
       "symbol": "NNAR",
-      "company": "Naya Nazimabad Apartments Reit",
+      "company": "Naya Nazimabad Apartment REIT",
       "sector": "REAL ESTATE INVESTMENT TRUST",
       "status": "Listed",
       "instrumentType": "Equity",
@@ -6077,7 +6077,7 @@
     },
     {
       "symbol": "SRR",
-      "company": "Signature Residency Reit",
+      "company": "Signature Residency REIT",
       "sector": "REAL ESTATE INVESTMENT TRUST",
       "status": "Listed",
       "instrumentType": "Equity",
